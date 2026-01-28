@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+body,html{
+  font-family: "Montserrat", sans-serif;
+
+}
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+ @theme{
+  --color-primary: oklch(58.6% 0.253 17.585);
+  --color-secondary:oklch(62.7% 0.265 303.9);
+  --color-third:oklch(54.1% 0.281 293.009);
+  --text-first:10px;
+  --text-sec:12px;
+
+  --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 1px 4px oklch(44.6% 0.043 257.281);
+  --shadow-glow: 0 5px 20px oklch(37.3% 0.034 259.733);
+  --shadow-weird:0px 4px 20px 0px rgba(15,12,12,0.08),0px 8px 12px -4px rgba(15,12,12,0.10),0px 0px 2px 0px rgba(15,12,12,0.10),0px 1px 2px 0px rgba(15,12,12,0.10);
+
+
+  --shadow-finta:0px 8px 12px -4px rgba(15,12,12,0.08),
+  0px 0px 2px 0px rgba(15,12,12,0.10),
+  0px 1px 2px 0px rgba(15,12,12,0.10);
+
+
+  
+}
+
+:root{
+  --background:#d1cbcb;
+  --foreground:black;
+ 
+}
+
+@theme inline{
+  --color-background:var(--background);
+  --color-foreground:var(--foreground);
+  --font-sans:var(--font-geist-sans);
+  --font-mono:var(--font-geist-mono);
+
+}
+
+
+
+@theme {
+  --animate-slide:slide 10s linear infinite;
+
+  @keyframes slide {
+    to{
+      transform:translateX(100%)
+    }
+    from{
+      transform:translateX(0%)
+    }
+    
+  }
+}
+@theme {
+  --animate-slideRepeat: slideRepeat 8s linear infinite;
+
+  @keyframes slideRepeat {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@theme{
+  --animate-pop:pop 1s linear infinite;
+
+  @keyframes pop {
+    from {
+      transform:opacity(0);
+    }
+    to{
+      transform:opacity(1)
+    }
+    
+  }
+}
