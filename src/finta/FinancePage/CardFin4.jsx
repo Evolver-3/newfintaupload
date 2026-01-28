@@ -1,11 +1,11 @@
-import React from 'react'
-import ButtonClickAnimation from '../ButtonClickAnimation'
+
+import NormalCardContain from '../NormalCardContain'
 
 const CardFin4 = () => {
   return (
-    <ButtonClickAnimation>
+    <NormalCardContain heading={"slack notifications"} text={"Get instant transaction alerts and monthly financial summaries in Slack."}>
     <img src='slack-notification-asset-v2.webp'/>
-    </ButtonClickAnimation>
+    </NormalCardContain>
   )
 }
 

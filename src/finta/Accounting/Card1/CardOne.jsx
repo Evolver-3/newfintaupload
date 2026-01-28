@@ -4,7 +4,7 @@ import InnerCard from './InnerCard'
 
 const CardFour = () => {
   return (
-    <ButtonClickAnimation>
+    <ButtonClickAnimation heading={"Auto-categorization"} text={"Transactions are automatically categorized and reconciled accurately in real-time."} logo={""}>
       <InnerCard/>
     </ButtonClickAnimation>
   )

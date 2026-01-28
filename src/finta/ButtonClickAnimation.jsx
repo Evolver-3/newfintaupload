@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-const ButtonClickAnimation = ({children}) => {
+const ButtonClickAnimation = ({children,heading,text,logo,className=''}) => {
   const [play, setPlay] = useState(false);
   const [showCard, setShowCard] = useState(false);
 
   const handlePlay = async () => {
+
+  
+
     setPlay(true);
 
     setTimeout(() => {
@@ -75,15 +78,12 @@ const ButtonClickAnimation = ({children}) => {
           </div>
 
           <div className="relative flex flex-col gap-y-3 sm:mx-auto sm:max-w-md sm:items-center sm:text-center">
-            <h2 className="text-blue-600 flex items-center gap-x-2 uppercase text-[11px] leading-4 font-bold">
-              <img
-                src="https://a-us.storyblok.com/f/1023015/20x20/791ddb56e7/tag-magic-icon.svg"
-                alt="Icon"
-              />
-              Auto-categorization
+            <h2 className='text-blue-600 flex items-center gap-x-2 uppercase text-[11px] leading-4 font-bold '>
+              {logo}
+              {heading}
             </h2>
-            <p className="font-book text-sm md:text-base">
-              Transactions are automatically categorized and reconciled accurately in real time.
+            <p className={`font-book text-sm md:text-base ${className}`}>
+              {text}
             </p>
           </div>
 

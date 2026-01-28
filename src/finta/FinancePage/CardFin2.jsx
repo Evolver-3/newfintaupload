@@ -1,12 +1,14 @@
-import React from 'react'
-import ButtonClickAnimation from '../ButtonClickAnimation'
+import NormalCardContain from "../NormalCardContain";
 
 const CardFin2 = () => {
+ 
   return (
-    <ButtonClickAnimation>
-      <img src='fluctuation-insights-asset.webp'/>
-    </ButtonClickAnimation>
-  )
-}
+    <NormalCardContain heading={"FLUCTUATION INSIGHTS"} text={"Track monthly changes, identify anomalies, and uncover drivers to revenue and expenses."} >
+      <img src="fluctuation-insights-asset.webp"/>
+    </NormalCardContain>
+
+
+)};
+
 
 export default CardFin2

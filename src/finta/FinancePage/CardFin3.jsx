@@ -1,11 +1,12 @@
-import React from 'react'
-import ButtonClickAnimation from '../ButtonClickAnimation'
+import NormalCardContain from "../NormalCardContain"
 
 const CardFin3 = () => {
   return (
-    <ButtonClickAnimation>
+    <NormalCardContain heading={"financial statements"} text={"Fundraising and 409A valuations ready with one-click download of your financials."}>
       <img src='financial-statements.webp'/>
-    </ButtonClickAnimation>
+    </NormalCardContain>
+      
+    
   )
 }
 

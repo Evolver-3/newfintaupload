@@ -4,7 +4,7 @@ import InnerCard3 from './InnerCard3'
 
 const CardFour = () => {
   return (
-    <ButtonClickAnimation>
+    <ButtonClickAnimation heading={"Auto-match transactions"} text={"Bank transfers are automatically matched and reconciled accurately in real-time."} logo={""}>
       <InnerCard3 />
     </ButtonClickAnimation>
   )

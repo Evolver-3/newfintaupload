@@ -5,7 +5,7 @@ import { useEffect,useRef } from 'react'
 
 const FintaChat = () => {
   const [scope,animate]=useAnimate()
-  const isInView=useInView(scope,{margin:"-100px",once:false,amount:0.5})
+  const isInView=useInView(scope,{margin:"-10px",once:false,amount:0.5})
 
   const MotionChatUi = motion(ChatUi)
 
@@ -53,6 +53,8 @@ const FintaChat = () => {
 
     <motion.div
     initial={{opacity:0,y:160}}
+    exit={{y:160,opacity:0}}
+    transition={{duration:.2}}
     className='secondBlock flex gap-4 mt-6'>
       
       <div className='w-10 h-10 bg-lime-500 rounded-full'></div>
