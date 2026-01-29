@@ -9,6 +9,7 @@ import Pricing from './finta/PricingSection/Pricing'
 import AccountingCard from './finta/Accounting/AccountingCard'
 import Finance from './finta/FinancePage/Finance'
 
+
 const App = () => {
   return (
     <div className='bg-white'>
@@ -19,6 +20,7 @@ const App = () => {
       <Finance/>
       <Pricing/>
       <Footer/>
+     
 
 
       
