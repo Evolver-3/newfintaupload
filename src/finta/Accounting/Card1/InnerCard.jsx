@@ -30,12 +30,12 @@ const statusStyles={
 
 const InnerCard = () => {
   return (
-  <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-120 ' >
+  <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-full ' >
 
     <div className='flex flex-col gap-5'>
 
     {DataCard.map((data,index)=>((
-      <div className='grid grid-cols-2 gap-10  border-b border-black/10 pb-3' key={data.text}>
+      <div className='grid grid-cols-2 gap-10  border-b border-black/10 pb-3 w-full' key={data.text}>
 
       <div className='flex text-nowrap items-center gap-x-6 '>
 
