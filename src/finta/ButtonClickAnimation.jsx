@@ -1,30 +1,52 @@
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import  { useState,useRef, useEffect } from "react";
+import { motion, AnimatePresence,useInView } from "motion/react";
 
 
 const ButtonClickAnimation = ({children,heading,text,logo,className=''}) => {
-  const [play, setPlay] = useState(false);
-  const [showCard, setShowCard] = useState(false);
-
-  const handlePlay = async () => {
-
   
 
-    setPlay(true);
+  const [autoPlay,setAutoPlay]=useState(false);
+  const [showCard,setShowCard]=useState(false);
+  const [showButton,setShowButton]=useState(false);
+  const [play,setPlay]=useState(false);
 
-    setTimeout(() => {
-      setShowCard(true);
-    }, 300);
+  const containerRef=useRef(null);
+  const isInView=useInView(containerRef,{once:true})
 
-    setTimeout(() => {
-      setShowCard(false);
-    }, 2500);
+  const waiting=(s)=>new Promise((res)=>setTimeout(res,s))
 
-    setTimeout(() => {
-      setPlay(false);
-    }, 2800);
-  };
+  useEffect(()=>{
+    if(!isInView)
+    return
+
+    const runAnimation=async()=>{
+      
+    for(let i=0;i<3;i++){
+      setShowCard(true)
+      await waiting(3000)
+      setShowCard(false)
+      await waiting(500)
+    }
+    setAutoPlay(false)
+    setShowButton(true)
+    }
+    runAnimation()
+  },[isInView])
+
+const handlePlay = async () => {
+  if (play) return
+
+  setPlay(true)
+  setShowButton(false)
+
+  setShowCard(true)
+  await waiting(3000)
+  setShowCard(false)
+
+  setPlay(false)
+  setShowButton(true)
+}
 
   return (
     <div className="container">
@@ -32,7 +54,8 @@ const ButtonClickAnimation = ({children,heading,text,logo,className=''}) => {
         <div className="flex h-full flex-col justify-end">
 
           <div className="absolute top-0 left-1/2 flex w-full max-w-106 -translate-x-1/2 justify-center pt-6 lg:pt-10">
-            <div className="relative min-h-45 w-full sm:max-w-106">
+            <div className="relative min-h-45 w-full sm:max-w-106"
+            ref={containerRef}>
 
               <div className="absolute inset-0 flex items-center justify-center min-h-45">
 
@@ -51,7 +74,7 @@ const ButtonClickAnimation = ({children,heading,text,logo,className=''}) => {
                 </AnimatePresence>
 
                 <AnimatePresence>
-                  {!play && (
+                  {showButton &&!play && !autoPlay && (
                     <motion.div
                       onClick={handlePlay}
                       initial={{ opacity: 0, scale: 0.8 }}
