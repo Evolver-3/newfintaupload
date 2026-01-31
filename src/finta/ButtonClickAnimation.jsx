@@ -5,47 +5,47 @@ import { motion, AnimatePresence,useInView } from "motion/react";
 
 const ButtonClickAnimation = ({children,heading,text,logo,className=''}) => {
   
+const [autoPlay,setAutoPlay]=useState(false);
+const [showCard,setShowCard]=useState(false);
+const [showBtn,setShowBtn]=useState(false);
+const[play,setPlay]=useState(false);
 
-  const [autoPlay,setAutoPlay]=useState(false);
-  const [showCard,setShowCard]=useState(false);
-  const [showButton,setShowButton]=useState(false);
-  const [play,setPlay]=useState(false);
+const containerRef=useRef(null);
 
-  const containerRef=useRef(null);
-  const isInView=useInView(containerRef,{once:true})
+const isInView=useInView(containerRef,{once:true})
 
-  const waiting=(s)=>new Promise((res)=>setTimeout(res,s))
+const waitingTime=(ms)=>new Promise((res)=>setTimeout(res,ms))
 
-  useEffect(()=>{
-    if(!isInView)
-    return
-
-    const runAnimation=async()=>{
-      
+useEffect(()=>{
+  if(!isInView)return
+  
+  const startAutoAnimation=async()=>{
     for(let i=0;i<3;i++){
-      setShowCard(true)
-      await waiting(3000)
-      setShowCard(false)
-      await waiting(500)
-    }
-    setAutoPlay(false)
-    setShowButton(true)
-    }
-    runAnimation()
-  },[isInView])
 
-const handlePlay = async () => {
-  if (play) return
+      setShowCard(true)
+      await waitingTime(5000)
+      setShowCard(false)
+      await waitingTime(800)
+    }
+
+    setAutoPlay(false)
+    setShowBtn(true)
+  }
+  startAutoAnimation()
+},[isInView])
+
+const handlePlay=async()=>{
+  if(play)return
 
   setPlay(true)
-  setShowButton(false)
+  setShowBtn(false)
 
   setShowCard(true)
-  await waiting(3000)
+  await waitingTime(5000)
   setShowCard(false)
 
   setPlay(false)
-  setShowButton(true)
+  setShowBtn(true)
 }
 
   return (
@@ -57,7 +57,7 @@ const handlePlay = async () => {
             <div className="relative min-h-45 w-full sm:max-w-106"
             ref={containerRef}>
 
-              <div className="absolute inset-0 flex items-center justify-center min-h-45">
+              <div className="absolute inset-0 flex items-center justify-center min-h-45 w-full">
 
                 <AnimatePresence>
                   {showCard && (
@@ -74,7 +74,7 @@ const handlePlay = async () => {
                 </AnimatePresence>
 
                 <AnimatePresence>
-                  {showButton &&!play && !autoPlay && (
+                  {showBtn &&!play && !autoPlay && (
                     <motion.div
                       onClick={handlePlay}
                       initial={{ opacity: 0, scale: 0.8 }}

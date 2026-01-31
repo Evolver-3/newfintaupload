@@ -1,6 +1,3 @@
-import {motion} from 'motion/react'
-
-import React from 'react'
 
 const DataCard=[
   {time:"1m age",text:"Slack",span:"Software",amount:"-$25",icon:<i className='bx  bx-laptop-alt'></i>,status:"expense"},
