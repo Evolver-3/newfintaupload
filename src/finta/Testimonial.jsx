@@ -34,7 +34,7 @@ const Testimonial = () => {
         <motion.div
         animate={{height: open ? 1000:500}}
         transition={{duration:.6,ease:"easeOut"}}
-        className='mask-t-from-95% mask-b-from-95%  grid grid-cols-3  overflow-hidden  '>
+        className='mask-t-from-95% mask-b-from-95%  grid md:grid-cols-3  overflow-hidden  '>
 
           <Upside/>
           <Downside/>
