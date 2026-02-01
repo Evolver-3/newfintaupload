@@ -31,7 +31,9 @@ const Datapage = () => {
        </NormalCardContain>
 
        <NormalCardContain heading={"EXPERTISE & GUIDANCE"} text={"Dedicated Slack channel for expert guidance on IRS notices, compliance letters, and more."} >
-        <img src='expertise.webp'/> 
+        <div className='h-75'>
+          <img src='expertise.webp'/> 
+        </div>
        </NormalCardContain>
        
         

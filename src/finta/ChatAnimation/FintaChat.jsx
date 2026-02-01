@@ -1,7 +1,7 @@
 import { motion,useAnimate,useInView,AnimatePresence} from 'motion/react'
 import ChatUi from './ChatUi'
 import Popple from './Popple'
-import { useEffect,useRef } from 'react'
+import { useEffect} from 'react'
 
 const FintaChat = () => {
   const [scope,animate]=useAnimate()
