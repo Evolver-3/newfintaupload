@@ -1,6 +1,5 @@
-import Container  from './Container'
 import React, { useState ,useEffect} from 'react'
-import {motion} from 'motion/react'
+import {AnimatePresence, motion} from 'motion/react'
 
 const Navbar = () => {
   const navItems=[{title:"Founders",href:"/Founders"},
@@ -27,13 +26,13 @@ const Navbar = () => {
   const [open,setOpen]=useState(false)
   return (<>
     
-      <motion.div className='fixed w-full bg-white opacity-95 z-20 '>
-        <motion.div
-        initial={{opacity:0}}
-        animate={{opacity:scroll ? 1:0}}
-        transition={{duration:0.3}}
-
-        className='absolute inset-0 py-4 shadow-finta z-50 '></motion.div>
+      <motion.div
+      animate={{
+        boxShadow:scroll ? "var(--shadow-finta)":""
+      }}
+      transition={{duration:0.4}}
+      className='fixed w-full bg-white opacity-95 z-20 '>
+       
       <div className='flex justify-around  items-center py-4 text-md relative '>
         <div className='flex justify-between '>
           <img src='/finta-icon-light.svg' className='w-5'></img>
@@ -56,8 +55,15 @@ const Navbar = () => {
         </button>
         
       </div>
+      <AnimatePresence >
       {open && (
-        <div className='fixed flex flex-col justify-between px-10 md:px-50 items-center py-4  text-md bg-white md:hidden rounded-md mx-3 w-[95%] top-2 shadow-strong '>
+        
+        <motion.div
+        initial={{opacity:0,x:"100%"}}
+        animate={{opacity:1,x:0}}
+        exit={{opacity:0,x:"100%"}}
+        transition={{type:"spring",stiffness:100,damping:20}}
+        className='fixed flex flex-col justify-between px-10 md:px-50 items-center py-4  text-md bg-white md:hidden rounded-md mx-3 w-[95%] top-2 shadow-strong '>
 
         <div className='flex justify-between gap-3 '>
           <img src='/finta-icon-light.svg' className='w-5'></img>
@@ -79,10 +85,10 @@ const Navbar = () => {
           <i className='bx bx-x bx-sm text-neutral-600 hover:text-neutral-400'></i>
         </button>
         
-      </div>
-        
-
+        </motion.div>
+      
       )}
+      </AnimatePresence>
       </motion.div>
       </>
  
