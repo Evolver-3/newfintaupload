@@ -34,10 +34,11 @@ const FintaChat = () => {
     <AnimatePresence>
     <div
     ref={scope}
-    className='flex flex-col justify-center w-100 px-1 py-10'>
+    className='flex flex-col justify-center w-90 px-4 py-5 h-fit rounded-md mask-y-from-90% mask-y-to-0%'>
 
 
-    <motion.div
+    <div className='pb-20 shadow-finta px-3'>
+      <motion.div
     initial={{y:180}}
     className='firstBlock flex flex-col gap-1 w-fit ml-auto'>
 
@@ -81,6 +82,7 @@ const FintaChat = () => {
         </motion.div>
 
     </motion.div>
+    </div>
 
     </div>
 
