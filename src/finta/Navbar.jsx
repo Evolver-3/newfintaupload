@@ -51,7 +51,7 @@ const Navbar = () => {
           
         </div>
 
-        <button className='md:hidden cursor-pointer' onClick={()=>setOpen(!open)}>
+        <button className='text-xl cursor-pointer md:hidden' onClick={()=>setOpen(!open)}>
           <i className='bx bx-menu'></i>
         </button>
         
