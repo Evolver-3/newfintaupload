@@ -1,38 +1,67 @@
 import React from 'react'
-import ButtonClickAnimation from '../ButtonClickAnimation'
-
-const data=[
-  {id:1,text:"Cash",amount:"$4,333,232",spanElement:"Updated 1m ago"},
-  {id:2,text:"MRR",amount:"$4,333,232",spanElement:"Updated 1m ago"},
-  {id:3,text:"Burn",amount:"$4,333,232",spanElement:"Updated 1m ago"}]
+import NormalCardContain from '../NormalCardContain'
+import {motion} from 'motion/react'
 
 const CardFin1 = () => {
-  return (
-    <ButtonClickAnimation heading={"INVESTOR-READY METRICS"} text={"Send investor updates with real-time access to cash, burn rate, runway, and MRR."} logo={""}>
-
-      <div className='bg-lime-600 w-full h-40 overflow-hidden '>
-      <div className=' w-[200%] gap-10 flex'>
-       
   
-          {data.map((item,index)=>(
-          <div className='shadow-finta  bg-white rounded-md w-80 shrink-0 ' key={item.id}>
-            <div className='flex flex-col gap-6 my-4 ml-5'>
-              <h3>{item.text}</h3>
+const MotionCard=motion(SmallCard)
+  return (
+ <NormalCardContain heading={"INVESTOR-READY METRICS"} text={"Send investor updates with real-time access to cash, burn rate, runway, and MRR."} logo={""}>
 
-              <h2>{item.amount}</h2>
+      <div className='relative w-full h-40 '>
+      <div className=' relative flex items-center'>
+        
+          <MotionCard
+          initial={{x:-200,opacity:0.5}}
+          animate={{x:100,opacity:1}}
+          transition={{duration:3}}
+          
+          
+          text={"data"} amount={"$4,333,232"} time={"Updated 1m ago"}>
 
-              <div>{item.spanElement}</div>
+          </MotionCard>
 
-            </div>
-          </div>
+          <MotionCard
+          initial={{x:200,opacity:0.5}}
+          
+          
+          text={"data"} amount={"$4,333,232"} time={"Updated 1m ago"}>
 
-        ))}
-       
+          </MotionCard>
+
+          <MotionCard
+          initial={{x:100,opacity:1}}
+          
+          
+          text={"data"} amount={"$4,333,232"} time={"Updated 1m ago"}>
+
+          </MotionCard>
+
+        
+
        
       </div>
       </div>
-    </ButtonClickAnimation>
+   </NormalCardContain>
   )
 }
 
 export default CardFin1
+
+
+const SmallCard=({text,amount,time})=>{
+
+  return(
+    <div
+          className= 'rounded-md w-60 shrink-0'>
+            <div className='flex flex-col gap-4 shadow-finta rounded-xl'>
+              <h3>{text}</h3>
+
+              <h2>{amount}</h2>
+
+              <div>{time}</div>
+
+            </div>
+          </div>
+  )
+}
