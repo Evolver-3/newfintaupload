@@ -21,7 +21,7 @@ const Body = () => {
 
       <div className='text-center flex items-center flex-col justify-center gap-5'>
 
-        <h1 className='text-[55px] leading-13 font-bold  max-w-xl'>Magically simplify accounting and taxes</h1>
+        <h1 className='text-[55px] leading-13 font-semibold  max-w-xl'>Magically simplify accounting and taxes</h1>
 
         <p className='text-lg text-center max-w-lg leading-tight text-neutral-600'>Automated bookkeeping. Effortless tax filing. Financial clarity. Set up in 10 mins. Back to building by 12:06am.</p>
 
@@ -31,7 +31,7 @@ const Body = () => {
 
         <button className='bg-blue-500 rounded-md px-4 py-1.5 text-white text-sm  hover:bg-blue-600 cursor-pointer font-semibold text-shadow-new'>Get started</button>
 
-        <button className='rounded-md px-3 py-1 gap-x-0.5 hover:bg-blue-200 flex items-center justify-center'>Pricing<i className='bx bx-arrow-right text-neutral-500'></i></button>
+        <button className='rounded-md px-3 py-1 gap-x-0.5 hover:bg-blue-100 flex items-center justify-center'>Pricing<i className='bx bx-arrow-right text-neutral-500'></i></button>
       </div>
 
       <h3 className='text-[13px] text-neutral-400'>For US-based startups.</h3>

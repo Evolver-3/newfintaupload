@@ -7,15 +7,14 @@ const CardFin1 = () => {
   return (
  <NormalCardContain heading={"INVESTOR-READY METRICS"} text={"Send investor updates with real-time access to cash, burn rate, runway, and MRR."} logo={""}>
 
-      <div className='relative w-full h-40 overflow-hidden'>
-      <div className=' relative flex w-72 my-4'>
+      <div className='relative w-full h-40 flex justify-center overflow-hidden'>
+      <div className=' relative w-72 my-4 h-full '>
         
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-0 opacity-100 z-1'/>
+         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-0 opacity-100 z-10'/>
 
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-[calc(100%+16px)] translate-y-4'/>
+         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-[calc(100%+16px)] translate-y-4 opacity-40'/>
 
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-[calc(-100%-16px)]
-'/>
+         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-[calc(-100%-16px)] translate-y-4 opacity-40'/>
 
          <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='opacity-0 translate-x-[200%]'/>
 
@@ -37,7 +36,7 @@ const SmallCard=({text,amount,time,className=''})=>{
 
   return(
     <div
-          className= {`absolute inset-0 rounded-md w-full p-4 shrink-0 ${className}`}>
+          className= {`absolute inset-0 rounded-md w-full p-4 shrink-0 transition-all duration-700 ease-in-out ${className}`}>
             <div className='flex flex-col gap-3 shadow-weird rounded-xl py-2 px-4 '>
               <h3 className='text-sm text-neutral-800 font-sans'>{text}</h3>
 

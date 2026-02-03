@@ -28,12 +28,13 @@ const Navbar = () => {
     
       <motion.div
       animate={{
-        boxShadow:scroll ? "var(--shadow-finta)":""
+        boxShadow:scroll ? "var(--shadow-finta)":"",
+        background:scroll ? "white":"transparent"
       }}
       transition={{duration:0.4}}
-      className='fixed w-full bg-white opacity-95 z-20 '>
+      className='fixed w-full opacity-95 z-20 '>
        
-      <div className='flex justify-around  items-center py-4 text-md relative '>
+      <div className='flex justify-around  items-center py-4 text-md relative'>
         <div className='flex justify-between '>
           <img src='/finta-icon-light.svg' className='w-5'></img>
           <h2 className='text-[20px] font-semibold ml-1'>Finta</h2>
