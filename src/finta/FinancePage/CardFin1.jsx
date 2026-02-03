@@ -1,7 +1,32 @@
-
 import NormalCardContain from '../NormalCardContain'
+import { useEffect, useState } from 'react'
+import {motion} from 'motion/react'
+
+const cards=[
+  {text:"Cash",amount:"$453,900",message:"updated 1m ago"},
+  {text:"MRR",amount:"$124,800",message:"updated 2hr ago"},
+  {text:"Burn",amount:"$234,050",message:"updated 3m ago"}
+]
+const variants = {
+  center: { x: 0, y: 0, opacity: 1, scale: 1, zIndex: 10 },
+  right: { x: 300, y: 16, opacity: 0.6, scale: 0.95, zIndex: 5 },
+  left: { x: -300, y: 16, opacity: 0.6, scale: 0.95, zIndex: 5 },
+  hidden: { opacity: 0 }
+}
+
+
 
 const CardFin1 = () => {
+  const [index,setIndex]=useState(0)
+  
+
+  useEffect(()=>{
+    const id=setInterval(()=>{
+      setIndex((prev)=>(prev+1)% cards.length)
+    },3000)
+
+    return ()=>clearInterval(id)
+  },[])
  
 
   return (
@@ -9,20 +34,30 @@ const CardFin1 = () => {
 
       <div className='relative w-full h-40 flex justify-center overflow-hidden'>
       <div className=' relative w-72 my-4 h-full '>
-        
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-0 opacity-100 z-10'/>
 
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-[calc(100%+16px)] translate-y-4 opacity-40'/>
+        {cards.map((card,i)=>{
 
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='translate-x-[calc(-100%-16px)] translate-y-4 opacity-40'/>
+          const pos=(i-index+cards.length) % cards.length
 
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='opacity-0 translate-x-[200%]'/>
-
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='opacity-0 translate-x-[200%]'/>
-
-         <SmallCard  text={'Data'} amount={"$123,000"} time={"Updated 1m ago"} className='opacity-0 translate-x-[200%]'/>
+          return(
+          <motion.div
+          key={i}
+          variants={variants}
+          animate={
+            pos===0 ?"center" :pos===1?"right":"left"
+          }
+          transition={{type:"spring",stiffness:200,damping:40}}
          
-       
+          className='absolute inset-0'>
+
+            <SmallCard {...card}/>
+          </motion.div>
+          )
+
+
+         
+        })}
+    
       </div>
       </div>
    </NormalCardContain>
@@ -32,17 +67,17 @@ const CardFin1 = () => {
 export default CardFin1
 
 
-const SmallCard=({text,amount,time,className=''})=>{
+const SmallCard=({text,amount,message,className=''})=>{
 
   return(
     <div
-          className= {`absolute inset-0 rounded-md w-full p-4 shrink-0 transition-all duration-700 ease-in-out ${className}`}>
+          className= {`absolute inset-0 rounded-md w-full bg-white  p-4 shrink-0 ${className}`}>
             <div className='flex flex-col gap-3 shadow-weird rounded-xl py-2 px-4 '>
               <h3 className='text-sm text-neutral-800 font-sans'>{text}</h3>
 
               <h2 className='text-[25px] leading-tight font-semibold'>{amount}</h2>
 
-              <div className='px-2 py-1 rounded-xl bg-neutral-200 text-sec text-neutral-500 w-fit'>{time}</div>
+              <div className='px-2 py-1 rounded-xl bg-neutral-200 text-sec text-neutral-500 w-fit'>{message}</div>
 
             </div>
           </div>

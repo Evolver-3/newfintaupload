@@ -23,7 +23,7 @@ const Body = () => {
 
         <h1 className='text-[55px] leading-13 font-semibold  max-w-xl'>Magically simplify accounting and taxes</h1>
 
-        <p className='text-lg text-center max-w-lg leading-tight text-neutral-600'>Automated bookkeeping. Effortless tax filing. Financial clarity. Set up in 10 mins. Back to building by 12:06am.</p>
+        <p className='text-md text-center max-w-lg leading-tight text-neutral-600'>Automated bookkeeping. Effortless tax filing. Financial clarity. Set up in 10 mins. Back to building by 12:06am.</p>
 
       </div>
 
