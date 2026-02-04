@@ -14,7 +14,7 @@ import Finance from './finta/FinancePage/Finance'
 
 const App = () => {
   return (
-    <div className='bg-white'>
+    <div className='bg-background'>
       <Lay/>
       <Testimonial/>
       <Datapage/>

@@ -37,7 +37,7 @@ const FintaChat = () => {
     className='flex flex-col justify-center w-90 px-4 py-5 h-fit rounded-md mask-y-from-90% mask-y-to-0%'>
 
 
-    <div className='pb-20 shadow-finta px-3'>
+    <div className='pb-20 shadow-finta px-3 bg-card'>
       <motion.div
     initial={{y:180}}
     className='firstBlock flex flex-col gap-1 w-fit ml-auto'>

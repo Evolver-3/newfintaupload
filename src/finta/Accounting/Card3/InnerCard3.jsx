@@ -58,7 +58,7 @@ export default InnerCard3
 
 const CardDefined=({text,time,amount})=>{
   return(
-    <div className='absolute w-60 h-15 shadow-weird flex gap-4 justify-around mx-5 items-center rounded-xl font-sans text-sm bg-white'>
+    <div className='absolute w-60 h-15 shadow-weird flex gap-4 justify-around mx-5 items-center rounded-xl font-sans text-sm bg-card'>
 
             <div className='flex gap-4 items-center'>
               <div className='w-10 h-10 bg-lime-500 rounded-full'></div>

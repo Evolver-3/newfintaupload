@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <Container>
-    <div className='flex flex-col gap-15 my-15'>
+    <div className='flex flex-col gap-15 mt-15'>
 
       <div className='bg-neutral-900 rounded-xl flex flex-col items-center justify-center h-90'>
 

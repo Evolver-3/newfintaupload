@@ -11,9 +11,8 @@ const Testimonial = () => {
 
   return (
 
-    <div className='dark:bg-neutral-100'>
      <Container>
-      <div className=' flex flex-col gap-10 items-center justify-center text-center py-10 bg-transparent'>
+      <div className=' flex flex-col gap-10 items-center justify-center text-center py-10 '>
 
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-medium text-center tracking-wide">
         Built for<strong class="text-blue-500 font-medium"> ambitious founders</strong>
@@ -55,7 +54,7 @@ const Testimonial = () => {
 
    
      </Container>
-     </div>
+
   )
 }
 

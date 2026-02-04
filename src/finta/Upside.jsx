@@ -112,7 +112,7 @@ export default function Upside() {
         }}
       >
         {[...items,...items].map((test,index)=>(
-            <div key={index} className='bg- shadow-finta bg-white rounded-xl  text-left px-5 py-4 flex flex-col items-start gap-4 '>
+            <div key={index} className='bg- shadow-finta bg-card rounded-xl  text-left px-5 py-4 flex flex-col items-start gap-4 '>
 
               <p className='text-sm text-neutral-900 leading-4 mb-2'>{test.quote}</p>
 

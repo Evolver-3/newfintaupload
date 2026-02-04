@@ -35,7 +35,7 @@ const Navbar = () => {
       transition={{duration:0.4}}
       className='fixed w-full opacity-95 z-20 '>
        
-      <div className='flex justify-around  items-center py-4 text-md relative'>
+      <div className='flex justify-around  items-center py-4 text-md relative text-foreground'>
         <div className='flex justify-between '>
           <img src='/finta-icon-light.svg' className='w-5'></img>
           <h2 className='text-[20px] font-semibold ml-1'>Finta</h2>
@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className=' gap-5 items-center hidden md:flex'>
           
           {navItems.map((item)=>(
-            <a href={item.href} key={item.title} className='text-black text-sm hover:text-neutral-700'>{item.title}</a>
+            <a href={item.href} key={item.title} className=' text-sm hover:text-neutral-700'>{item.title}</a>
           ))}
 
           <button className='bg-blue-500 rounded-md px-4 py-1.5 text-white text-sm  hover:bg-blue-600 cursor-pointer font-semibold text-shadow-new'>Get started</button>
@@ -67,7 +67,7 @@ const Navbar = () => {
         animate={{opacity:1,x:0}}
         exit={{opacity:0,x:"100%"}}
         transition={{type:"spring",stiffness:100,damping:20}}
-        className='fixed flex flex-col justify-between px-10 md:px-50 items-center py-4  text-md bg-white md:hidden rounded-md mx-3 w-[95%] top-2 shadow-strong '>
+        className='fixed flex flex-col justify-between px-10 md:px-50 items-center py-4  text-md bg-white dark:bg-gray-500 md:hidden rounded-md mx-3 w-[95%] top-2 shadow-strong '>
 
         <div className='flex justify-between gap-3 '>
           <img src='/finta-icon-light.svg' className='w-5'></img>

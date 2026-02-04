@@ -113,7 +113,7 @@ const Downside = () => {
             }}
           >
             {[...items,...items].map((test,index)=>(
-                <div key={index} className='shadow-finta rounded-xl  text-left px-5 py-4 bg-white flex flex-col items-start gap-4'>
+                <div key={index} className='shadow-finta rounded-xl  text-left px-5 py-4 bg-card flex flex-col items-start gap-4'>
 
                   <p className='text-sm text-neutral-900  leading-4 mb-2'>{test.quote}</p>
 

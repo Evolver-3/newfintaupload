@@ -13,7 +13,7 @@ const Body = () => {
     <Container>
     <div className='flex flex-col items-center mx-auto justify-center gap-5 '>
 
-      <div className='flex items-center rounded-full mt-35 mb-5 px-4 py-0.75 pr-1.75 pl-2.75  text-[14px] cursor-pointer gap-x-1.5 border border-black/3 bg-[rgba(30,31,37,0.04)] backdrop-blur-[2.5px] hover:bg-[rgba(30,31,37,0.08)] text-xs font-semibold '>
+      <div className='flex items-center rounded-full mt-35 mb-5 px-4 py-0.75 pr-1.75 pl-2.75  text-[14px] cursor-pointer gap-x-1.5 border border-black/3 bg-[rgba(30,31,37,0.04)] backdrop-blur-[2.5px] hover:bg-[rgba(30,31,37,0.08)] text-xs font-semibold dark:text-foreground'>
       
           Form 1099s are due by January 31
         <i className='bx bx-arrow-right'></i>
@@ -21,9 +21,9 @@ const Body = () => {
 
       <div className='text-center flex items-center flex-col justify-center gap-5'>
 
-        <h1 className='text-[55px] leading-13 font-semibold  max-w-xl'>Magically simplify accounting and taxes</h1>
+        <h1 className='text-[55px] leading-13 font-semibold  max-w-xl text-foreground'>Magically simplify accounting and taxes</h1>
 
-        <p className='text-md text-center max-w-lg leading-tight text-neutral-600'>Automated bookkeeping. Effortless tax filing. Financial clarity. Set up in 10 mins. Back to building by 12:06am.</p>
+        <p className='text-md text-center max-w-lg leading-tight text-neutral-600 dark:text-neutral-200'>Automated bookkeeping. Effortless tax filing. Financial clarity. Set up in 10 mins. Back to building by 12:06am.</p>
 
       </div>
 

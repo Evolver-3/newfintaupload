@@ -19,7 +19,7 @@ const data = [
 
 const SpanElement=({className='',tag})=>{
   return(
-    <div className={`${className} rounded-sm shadow-finta flex justify-around items-center mx-1`}>
+    <div className={`${className} rounded-sm shadow-finta flex justify-around items-center mx-1 `}>
 
       {tag}
       <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
@@ -36,10 +36,10 @@ const SpanElement=({className='',tag})=>{
 
 const InnerCard4 = () => {
   return (
-    <div className='w-full h-fit container shadow-finta'>
+    <div className='w-full h-fit container shadow-finta '>
      {
       data.map((item,index)=>(
-        <div key={index} className='flex flex-col gap-4 w-55'>
+        <div key={index} className='flex flex-col gap-4 w-55 bg-card'>
 
           <div className='text-first text-neutral-700 font-semibold px-1 py-1 bg-neutral-200 w-fit rounded-sm'>
             {item.type.toUpperCase()}

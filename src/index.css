@@ -31,16 +31,22 @@ body,html{
 }
 
 :root{
-  --background:#d1cbcb;
+  --background:white;
   --foreground:black;
+  --card: white;
+  
  
+}
+.dark{
+  --background:oklch(37.3% 0.034 259.733);
+  --foreground:white;
+  --card:oklch(86.9% 0.005 56.366);
 }
 
 @theme inline{
   --color-background:var(--background);
   --color-foreground:var(--foreground);
-  --font-sans:var(--font-geist-sans);
-  --font-mono:var(--font-geist-mono);
+  --color-card:var(--card)
 
 }
 

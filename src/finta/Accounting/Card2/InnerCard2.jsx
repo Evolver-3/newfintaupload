@@ -2,8 +2,8 @@ import React from 'react'
 
 const InnerCard2 = () => {
   return (
-    <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-full'>
-      <div className='flex flex-col gap-2 w-full'>
+    <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-full bg-card'>
+      <div className='flex flex-col gap-2 w-full '>
         <h2 className='text-sm font-semibold text-neutral-800'>Categorize 5 Paypal transactions as Software?</h2>
         <h3 className='text-sm text-neutral-500'>See 5 transactions.</h3>
 

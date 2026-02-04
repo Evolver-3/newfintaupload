@@ -27,7 +27,7 @@ const statusStyles={
 
 const InnerCard = () => {
   return (
-  <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-full ' >
+  <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-full bg-card' >
 
     <div className='flex flex-col gap-5'>
 
