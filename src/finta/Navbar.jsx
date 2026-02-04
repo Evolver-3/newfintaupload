@@ -1,5 +1,6 @@
 import React, { useState ,useEffect} from 'react'
 import {AnimatePresence, motion} from 'motion/react'
+import DarkBtn from './Darkmode/DarkBtn';
 
 const Navbar = () => {
   const navItems=[{title:"Founders",href:"/Founders"},
@@ -54,6 +55,8 @@ const Navbar = () => {
         <button className='text-xl cursor-pointer md:hidden' onClick={()=>setOpen(!open)}>
           <i className='bx bx-menu'></i>
         </button>
+
+        <DarkBtn/>
         
       </div>
       <AnimatePresence >

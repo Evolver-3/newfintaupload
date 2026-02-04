@@ -54,8 +54,7 @@ const Cardo = () => {
         custom={index}
 
         >
-          
-
+        
           <motion.div 
           className='relative flex items-center justify-center '>
 

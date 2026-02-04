@@ -23,8 +23,6 @@ const variants = {
   }
 }
 
-
-
 const InnerCard3 = () => {
 
 

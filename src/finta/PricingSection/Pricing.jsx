@@ -61,14 +61,14 @@ const Pricing = () => {
 
         </div>
 
-        <div className='mt-8  sm:block overflow-hidden'>
+        <div className='mt-8  sm:block w-full overflow-hidden'>
           <motion.div
           animate={{x:normal === 0 ? 0:"-50%"}}
           transition={{type:"spring",stiffness:120,damping:20}}
-          className='flex w-[200%] '>
+          className='flex w-[200%] items-start'>
 
-            <div className='w-1/2 shrink-0 pr-4'>
-              <div className='container pb-16 lg:pt-4 lg:pb-20'>
+            <div className='w-1/2 shrink-0 p-4 '>
+              <div className='container pb-6 lg:pt-4 lg:pb-20'>
                 <div className='mx-auto '>
                   <div className='mx-auto flex flex-col items-start gap-3 w-full p-5 rounded-xl bg-white ring-1 ring-black/10 ring-inset shadow-weird sm:max-w-121 sm:p-6 sm:gap-3 '>
                     <div className='flex flex-col items-start gap-2.5 self-stretch'>
@@ -162,9 +162,9 @@ const Pricing = () => {
               </div>
             </div>
 
-            <div className='w-1/2 shrink-0 pl-4'>
-              <div className='container pb-16 lg:pt-4 lg:pb-20'>
-                <div className='grid gap-y-10 lg:grid-cols-10 lg:gap-x-8'>
+            <div className='w-1/2 shrink-0 p-4'>
+              <div className='container pb-6 lg:pt-4 lg:pb-20'>
+                <div className='grid gap-y-4 lg:grid-cols-10 lg=:gap-x-8'>
                   <div className='grid grid-cols-1 gap-y-4 sm:grid-cols-3 sm:gap-x-4 lg:col-span-10'>
 
                     <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-white ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
