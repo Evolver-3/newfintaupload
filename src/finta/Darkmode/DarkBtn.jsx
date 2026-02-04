@@ -1,23 +1,58 @@
-import { useState,useEffect } from "react"
+import { useState,useEffect,useRef } from "react"
 import {motion} from 'motion/react'
 
 const DarkBtn = () => {
-  const [dark,setDark]=useState(
-    localStorage.getItem("theme")==="dark"
+
+  const [dark,setDark]=useState(()=>
+   localStorage.getItem("theme")==="dark"
   )
+  
+  const [height,setHeight]=useState(0)
+  const ref=useRef(null)
+
+    useEffect(()=>{
+     if(ref.current){
+      setHeight(ref.current.offsetHeight)
+    }
+  },[])
+  
+  const sideBarVarients={
+    open:(h)=>({
+      clipPath:`circle(${h*2+10000}px at 10px 10px)`,
+      transition:{type:"spring",stiffness:30}
+    }),
+    closed:{
+      clipPath:"circle(30px at 10px 10px)",
+      transition:{type:"spring",stiffness:400,damping:20}
+    }
+  }
 
   useEffect(()=>{
+    const root=document.documentElement
+
     if(dark){
-      document.documentElement.classList.add("dark")
+      root.classList.add("dark")
       localStorage.setItem("theme","dark")
     }else{
-      document.documentElement.classList.remove("dark")
+      root.classList.remove("dark")
       localStorage.setItem("theme","light")
     }
   },[dark])
+
+
   return (
-    <div className="absolute right-10 top-5">
-      <button onClick={()=>setDark(!dark)} className="text-sm dark:text-white text-yellow-500 ">
+    <div
+    ref={ref}
+    className=" absolute right-10 top-5">
+
+      <motion.div
+      variants={sideBarVarients}
+      animate={dark?'open':'closed'}
+      custom={height}
+      className="absolute inset-0 bg-yellow-600 dark:bg-neutral-black"
+      />
+
+      <button onClick={()=>setDark(prev=>!prev)} className="relative z-10 text-sm dark:text-white text-yellow-500 ">
         {dark?
         (
         <motion.svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" >
