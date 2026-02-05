@@ -12,7 +12,7 @@ const Testimonial = () => {
   return (
 
      <Container>
-      <div className=' flex flex-col gap-10 items-center justify-center text-center py-10 '>
+      <div className=' flex flex-col gap-10 items-center justify-center text-center py-10 text-foreground'>
 
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-medium text-center tracking-wide">
         Built for<strong class="text-blue-500 font-medium"> ambitious founders</strong>
@@ -41,7 +41,7 @@ const Testimonial = () => {
 
         </motion.div>
 
-          <button onClick={()=>setOpen(!open)} className='px-3 py-2 rounded-md bg-black text-white text-md'>
+          <button onClick={()=>setOpen(!open)} className='px-3 py-2 rounded-md bg-black dark:bg-white text-white dark:text-black text-md'>
           {open ?  "See less":"See more"}
         </button>
 

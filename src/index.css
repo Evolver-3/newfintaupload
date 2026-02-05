@@ -3,6 +3,7 @@
 body,html{
   font-family: "Inter", sans-serif;
 
+
 }
 
 
@@ -38,7 +39,7 @@ body,html{
  
 }
 .dark{
-  --background:oklch(37.3% 0.034 259.733);
+  --background:oklch(13% 0.028 261.692);
   --foreground:white;
   --card:oklch(86.9% 0.005 56.366);
 }
