@@ -23,7 +23,7 @@ const Pricing = () => {
 
       <div className='flex flex-col items-center justify-center my-30'>
 
-        <div className='flex flex-col gap-4 text-center'>
+        <div className='flex flex-col gap-4 text-center text-foreground'>
 
          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-medium text-center tracking-wide">
           Pricing for 
@@ -36,7 +36,7 @@ const Pricing = () => {
 
         <div className='w-full flex justify-center mt-10'>
 
-          <div className='relative inline-flex items-center justify-center rounded-lg border border-black/3 bg-[rgba(30,31,37,0.04)] p-0.5'>
+          <div className='relative inline-flex items-center justify-center rounded-lg border border-black/3 bg-[rgba(30,31,37,0.04)] dark:bg-neutral-400 p-0.5 '>
 
           <motion.div
           animate={{x:normal ===0 ?0:"100%"}}
@@ -45,16 +45,16 @@ const Pricing = () => {
 
           <button
           onClick={()=>setNormal(0)}
-          className='relative z-1 flex w-25 items-center justify-center gap-2 rounded-md px-3 py-1.5 cursor-pointer'>
+          className='relative z-1 flex w-25 items-center justify-center gap-2 rounded-md px-3 py-1.5 cursor-pointe'>
 
-            <span className={`text-[14px] leading-5 font-md ${normal ===0 ?"text-neutral-900":"text-neutral-600"} `}>Taxes</span>
+            <span className={`text-[14px] leading-5 font-md ${normal ===0 ?"text-neutral-900":"text-neutral-700"} `}>Taxes</span>
           </button>
 
           <button
           onClick={()=>{setNormal(1)}}
           className='relative z-1 flex w-25 items-center justify-center gap-3 rounded-md px-3 py-1.5 cursor-pointer'>
             
-            <span className={`text-[14px] leading-5 font-md ${normal ===1 ?"text-neutral-900":"text-neutral-600"} `}>Accounting</span>
+            <span className={`text-[14px] leading-5 font-md ${normal ===1 ?"text-neutral-900":"text-neutral-700"} `}>Accounting</span>
           </button>
 
           </div>

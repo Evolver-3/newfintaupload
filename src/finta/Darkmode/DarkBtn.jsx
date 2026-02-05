@@ -49,7 +49,7 @@ const DarkBtn = () => {
       variants={sideBarVarients}
       animate={dark?'open':'closed'}
       custom={height}
-      className="absolute inset-0 bg-yellow-600 dark:bg-neutral-black"
+      className="absolute inset-0 dark:bg-neutral-black"
       />
 
       <button onClick={()=>setDark(prev=>!prev)} className="relative z-10 text-sm dark:text-white text-yellow-500 ">

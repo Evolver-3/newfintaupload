@@ -39,7 +39,7 @@ body,html{
  
 }
 .dark{
-  --background:oklch(13% 0.028 261.692);
+  --background:oklch(21.6% 0.006 56.043);
   --foreground:white;
   --card:oklch(86.9% 0.005 56.366);
 }
