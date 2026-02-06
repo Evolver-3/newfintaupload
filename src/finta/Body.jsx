@@ -10,7 +10,7 @@ const Body = () => {
   ]
 
   return (
-    <Container>
+ 
     <div className='flex flex-col items-center mx-auto justify-center gap-5 '>
 
       <div className='flex items-center rounded-full mt-35 mb-5 px-4 py-0.75 pr-1.75 pl-2.75  text-[14px] cursor-pointer gap-x-1.5 border border-black/3 bg-[rgba(30,31,37,0.04)] backdrop-blur-[2.5px] hover:bg-[rgba(30,31,37,0.08)] text-xs font-semibold dark:text-foreground'>
@@ -36,15 +36,15 @@ const Body = () => {
 
       <h3 className='text-[13px] text-neutral-400'>For US-based startups.</h3>
 
-      <div className='mt-15'>
-        <img src='/hero.webp' className='object-cover rounded-md mask-b-from-50% to-100% mx-auto'></img>
+      <div className='mt-15 '>
+        <img src='/hero.webp' className='object-cover rounded-md mx-auto w-[80%] '></img>
       </div>
 
-      <h2 className='text-sm mt-5'>Trusted by fast-growing startups</h2>
+      <h2 className='text-sm mt-5 text-foreground'>Trusted by fast-growing startups</h2>
 
 
       <div className='mask-r-from-80% mask-l-from-90%  overflow-hidden relative'>
-      <motion.div className='flex  w-max gap-10 text-[30px] font-semibold  max-w-2xl'
+      <motion.div className='flex w-max gap-10 text-[30px] font-semibold max-w-2xl'
       animate={{
         x:["0%","-50%"]
       }}
@@ -54,14 +54,14 @@ const Body = () => {
       >
         {[...scrollItems, ...scrollItems].map((scroll,index)=>(
           <div className='flex flex-row' key={index}>
-          <h2  className='text-neutral-500 hover:text-neutral-600 leading-tight whitespace-nowrap text-[25px] font-light'>{scroll.title}</h2>
+          <h2  className='text-neutral-500 hover:text-neutral-600 dark:text-neutral-300  leading-tight whitespace-nowrap text-[25px] font-mono'>{scroll.title}</h2>
           </div>
         ))}
       </motion.div>
       </div>
       
     </div>
-    </Container>
+
   )
 }
 

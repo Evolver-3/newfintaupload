@@ -28,12 +28,7 @@ const Navbar = () => {
   return (<>
     
       <motion.div
-      animate={{
-        boxShadow:scroll ? "var(--shadow-finta)":"",
-        background:scroll ? "white":"transparent"
-      }}
-      transition={{duration:0.4}}
-      className='fixed w-full opacity-95 z-20 '>
+      className={`fixed w-full opacity-95 z-20 ${scroll ? "bg-white dark:bg-gray-800 shadow-(--shadow-finta)":"bg-transparent"}`}>
        
       <div className='flex justify-around  items-center py-4 text-md relative text-foreground '>
         <div className='flex justify-between '>

@@ -7,13 +7,13 @@ const CustomBlock = ({icon,text,underlineExist=true,spanAvailable=true,spanText1
   
   return (
     <div >
-      <div className='flex items-center gap-4'>
+      <div className='flex md:items-start gap-4 md:gap-2'>
         {icon &&(
           <h2 className='text-blue-600'>{icon}</h2>
         )}
 
         {text &&  (
-          <button className={`relative text-sm font-medium text-neutral-600 group ${underliner} ${className}`}>
+          <button className={`relative text-[14px] font-medium text-neutral-600  group ${underliner} ${className}`}>
             {text}
 
             {spanAvailable &&(

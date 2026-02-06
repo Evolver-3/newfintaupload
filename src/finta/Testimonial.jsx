@@ -16,11 +16,11 @@ const Testimonial = () => {
 
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-medium text-center tracking-wide">
         Built for<strong class="text-blue-500 font-medium"> ambitious founders</strong>
-</h2>
+        </h2>
 
         <p className='text-sm max-w-md'>Finta is for founders and operators. It's powerful accounting software with simplified expert tax services we wish we'd had ourselves.</p>
 
-        <div className=' flex items-center gap-2 rounded-xl bg-neutral-300 px-4 py-0 text-sm'>
+        <div className=' flex items-center gap-2 rounded-xl bg-neutral-300 dark:text-gray-700 px-4 py-0 text-sm'>
 
           <i className='bx bx-star text-indigo-800 '></i>
 

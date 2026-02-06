@@ -16,7 +16,7 @@ const Datapage = () => {
        </NormalCardContain>
 
        <NormalCardContain heading={"CLAIM R&D TAX CREDITS"} text={"Finta’s experts help you maximize R&D tax credits and get money back from the IRS."}>
-       <img src='card.webp'/>
+       <img src='card.webp' />
        </NormalCardContain>
 
        <NormalCardContain heading={"LIVE CHAT"} text={"Get quick, accurate, and personalized answers from Finta’s experts to all your questions."}>
@@ -25,7 +25,7 @@ const Datapage = () => {
 
        <NormalCardContain heading={"EXPERTISE & GUIDANCE"} text={"Dedicated Slack channel for expert guidance on IRS notices, compliance letters, and more."} >
         <div className='h-75'>
-          <img src='expertise.webp'/> 
+          <img src='expertise.webp' className='w-80 rounded-xl'/> 
         </div>
        </NormalCardContain>
        

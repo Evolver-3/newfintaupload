@@ -54,8 +54,6 @@ const CardFin1 = () => {
           </motion.div>
           )
 
-
-         
         })}
     
       </div>
@@ -71,13 +69,13 @@ const SmallCard=({text,amount,message,className=''})=>{
 
   return(
     <div
-          className= {`absolute inset-0 rounded-md w-full bg-white  p-4 shrink-0 ${className}`}>
+          className= {`absolute inset-0 rounded-md w-full bg-transparent  p-4 shrink-0 ${className}`}>
             <div className='flex flex-col gap-3 shadow-weird rounded-xl py-2 px-4 bg-card'>
               <h3 className='text-sm text-neutral-800 font-sans'>{text}</h3>
 
-              <h2 className='text-[25px] leading-tight font-semibold'>{amount}</h2>
+              <h2 className='text-[25px] leading-tight font-semibold text-foreground'>{amount}</h2>
 
-              <div className='px-2 py-1 rounded-xl bg-neutral-200 text-sec text-neutral-500 w-fit'>{message}</div>
+              <div className='px-2 py-1 rounded-xl bg-neutral-200 text-sec text-neutral-500 dark:text-neutral-700 w-fit'>{message}</div>
 
             </div>
           </div>
@@ -85,4 +83,4 @@ const SmallCard=({text,amount,message,className=''})=>{
 }
 
 
-//mask-x-from-90% mask-x-to-100%
+

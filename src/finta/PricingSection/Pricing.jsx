@@ -70,7 +70,7 @@ const Pricing = () => {
             <div className='w-1/2 shrink-0 p-4 '>
               <div className='container pb-6 lg:pt-4 lg:pb-20'>
                 <div className='mx-auto '>
-                  <div className='mx-auto flex flex-col items-start gap-3 w-full p-5 rounded-xl bg-white ring-1 ring-black/10 ring-inset shadow-weird sm:max-w-121 sm:p-6 sm:gap-3 '>
+                  <div className='mx-auto flex flex-col items-start gap-3 w-full p-5 rounded-xl bg-white dark:bg-neutral-400 ring-1 ring-black/10 ring-inset shadow-weird sm:max-w-121 sm:p-6 sm:gap-3 '>
                     <div className='flex flex-col items-start gap-2.5 self-stretch'>
 
                       <h3>Taxes</h3>
@@ -167,7 +167,7 @@ const Pricing = () => {
                 <div className='grid gap-y-4 lg:grid-cols-10 lg=:gap-x-8'>
                   <div className='grid grid-cols-1 gap-y-4 sm:grid-cols-3 sm:gap-x-4 lg:col-span-10'>
 
-                    <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-white ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
+                    <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-white dark:bg-neutral-400 ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
 
                       <div>
                         <h2 className='text-sm font-medium  text-blue-600'>Formation</h2>
@@ -195,7 +195,7 @@ const Pricing = () => {
 
                     </div>
 
-                    <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-neutral-100 ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
+                    <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-neutral-100 dark:bg-neutral-300 ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
 
                       <div>
                         <h2 className='text-sm font-medium  text-blue-600'>Startup</h2>
@@ -232,7 +232,7 @@ const Pricing = () => {
 
                     </div>
 
-                    <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-neutral-100 ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
+                    <div className='flex flex-col justify-between gap-y-10 rounded-xl p-5 sm:p-4 sm:pb-5 lg:p-6 bg-neutral-100  dark:bg-neutral-300 ring-1 ring-[rgba(32,32,32,0.08)] ring-inset shadow-weird '>
 
                       <div>
                         <h2 className='text-sm font-medium  text-blue-600'>Growth</h2>
