@@ -1,6 +1,6 @@
 import React, { useState ,useEffect} from 'react'
 import {AnimatePresence, motion} from 'motion/react'
-import DarkBtn from './Darkmode/DarkBtn';
+import DarkBtn from '../Darkmode/DarkBtn';
 
 const Navbar = () => {
   const navItems=[{title:"Founders",href:"/Founders"},
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className=' gap-5 items-center hidden md:flex'>
           
           {navItems.map((item)=>(
-            <a href={item.href} key={item.title} className=' text-sm hover:text-neutral-700'>{item.title}</a>
+            <a href={item.href} key={item.title} className=' text-sm hover:text-neutral-700 hover'>{item.title}</a>
           ))}
 
           <button className='bg-blue-500 rounded-md px-4 py-1.5 text-white text-sm  hover:bg-blue-600 cursor-pointer font-semibold text-shadow-new'>Get started</button>

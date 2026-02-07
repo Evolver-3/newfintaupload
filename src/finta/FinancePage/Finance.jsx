@@ -1,10 +1,9 @@
-import Container from '../Container'
-import React from 'react'
+import Container from '../CustomComponent/Container'
 import CardFin1 from './CardFin1'
 import CardFin2 from './CardFin2'
 import CardFin3 from './CardFin3'
 import CardFin4 from './CardFin4'
-import CustomMain from '../CustomMain'
+import CustomMain from '../CustomComponent/CustomMain'
 
 
 const Finance= () => {

@@ -1,4 +1,4 @@
-import Container from './Container'
+import Container from '../CustomComponent/Container'
 import {motion} from 'motion/react'
 
 const Body = () => {

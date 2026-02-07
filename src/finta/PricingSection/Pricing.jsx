@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Container from '../Container'
+import Container from '../CustomComponent/Container'
 import {motion} from 'motion/react'
 import CustomBlock from './CustomBlock'
 

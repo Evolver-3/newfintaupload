@@ -34,7 +34,7 @@ const FintaChat = () => {
     <AnimatePresence>
     <div
     ref={scope}
-    className='flex flex-col justify-center w-90 px-4 py-5 h-fit rounded-md mask-y-from-90% mask-y-to-0%'>
+    className='flex flex-col justify-center w-90  h-95 rounded-md mask-y-from-90% mask-y-to-0% mb-5 '>
 
 
     <div className='pb-20 shadow-finta px-3 bg-card'>
@@ -44,7 +44,7 @@ const FintaChat = () => {
 
       <ChatUi text={"Hey, is it possible to expense office rent through my startup?"}/>
 
-      <div className='flex items-center gap-x-1.5 ml-auto text-first pr-5 text-neutral-700'>
+      <div className='flex items-center gap-x-1.5 ml-auto text-first pr-5 text-neutral-700 dark:text-neutral-200'>
         <i className='bx  bx-checks'></i> 
         <h4> 11:50PM</h4>
       </div>
@@ -58,7 +58,7 @@ const FintaChat = () => {
     transition={{duration:.2}}
     className='secondBlock flex gap-4 mt-6'>
       
-      <div className='w-10 h-10 bg-lime-500 rounded-full'></div>
+      <div className='w-10 h-10 bg-teal-300 rounded-full'></div>
        
         <motion.div className='relative'>
 
@@ -66,8 +66,7 @@ const FintaChat = () => {
           <MotionChatUi className='textLoading absolute'
           initial={{opacity:0}}
           text={<Popple/>}/>
-          
-
+      
 
           <MotionChatUi className='text opacity-0'
           initial={{opacity:0}}
@@ -77,7 +76,7 @@ const FintaChat = () => {
           
           <motion.h3
           initial={{opacity:0,y:0}}
-          className='text-first text-neutral-700 pl-5 mt-2'>Andy from Finta</motion.h3>
+          className='text-first text-neutral-700 pl-5 mt-2 dark:text-neutral-300'>Andy from Finta</motion.h3>
 
         </motion.div>
 

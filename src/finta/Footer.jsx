@@ -1,5 +1,5 @@
-import LoginPage from './LoginPage'
-import Container from './Container'
+
+import Container from "./CustomComponent/Container"
 
 const Footer = () => {
 

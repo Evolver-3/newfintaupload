@@ -1,5 +1,5 @@
-import Container from '../Container'
-import CustomMain from '../CustomMain'
+import Container from '../CustomComponent/Container'
+import CustomMain from '../CustomComponent/CustomMain'
 
 import CardOne from './Card1/CardOne'
 import CardTwo from './Card2/CardTwo'

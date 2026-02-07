@@ -1,4 +1,4 @@
-import NormalCardContain from "../NormalCardContain"
+import NormalCardContain from "../CustomComponent/NormalCardContain";
 
 
 const CardFin3 = () => {

@@ -41,7 +41,7 @@ body,html{
 .dark{
   --background:oklch(27.8% 0.033 256.848);
   --foreground:white;
-  --card:oklch(86.9% 0.005 56.366);
+  --card:oklch(26.9% 0 0);
 }
 
 @theme inline{

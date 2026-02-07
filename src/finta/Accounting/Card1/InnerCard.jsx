@@ -1,3 +1,4 @@
+import CategorySpan from "./CategorySpan"
 
 const DataCard=[
   {time:"1m age",text:"Slack",span:"Software",amount:"-$25",icon:<i className='bx  bx-laptop-alt'></i>,status:"expense"},
@@ -44,9 +45,13 @@ const InnerCard = () => {
 
       <div className='flex items-center gap-10 justify-end'>
 
-        <div className={`flex items-center gap-2 rounded-md px-2 justify-end ${statusStyles[data.status].span}`}>
+        <div className='relative rounded-md px-2 justify-end '>
+          <div className={`relative flex items-center gap-2 ${statusStyles[data.status].span}`}>
           <h2 className='text-first'>{data.icon}</h2>
           <h2 className='text-[14px]'>{data.span}</h2>
+          </div>
+
+          <CategorySpan/>
          
         </div>
 

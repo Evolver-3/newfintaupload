@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonClickAnimation from '../../ButtonClickAnimation'
+import ButtonClickAnimation from '../../CustomComponent/ButtonClickAnimation'
 import InnerCard2 from './InnerCard2'
 
 const CardFour = () => {

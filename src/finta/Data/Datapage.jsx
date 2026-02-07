@@ -1,9 +1,9 @@
 
 import Cardo from './Cardo'
-import Container from '../Container'
+import Container from '../CustomComponent/Container'
 import FintaChat from '../ChatAnimation/FintaChat'
-import NormalCardContain from '../NormalCardContain'
-import CustomMain from '../CustomMain'
+import NormalCardContain from '../CustomComponent/NormalCardContain'
+import CustomMain from '../CustomComponent/CustomMain'
 
 const Datapage = () => {
 
@@ -19,7 +19,7 @@ const Datapage = () => {
        <img src='card.webp' />
        </NormalCardContain>
 
-       <NormalCardContain heading={"LIVE CHAT"} text={"Get quick, accurate, and personalized answers from Finta’s experts to all your questions."}>
+       <NormalCardContain heading={"LIVE CHAT"} text={"Get quick, accurate, and personalized answers from Finta’s experts to all your questions."} >
         <FintaChat/>
        </NormalCardContain>
 
