@@ -114,7 +114,7 @@ export default function Upside() {
         {[...items,...items].map((test,index)=>(
             <div key={index} className='bg- shadow-finta bg-card rounded-xl  text-left px-5 py-4 flex flex-col items-start gap-4 '>
 
-              <p className='text-sm text-neutral-900 leading-4 mb-2'>{test.quote}</p>
+              <p className='text-sm text-neutral-900 dark:text-neutral-200 leading-4 mb-2'>{test.quote}</p>
 
               <div className="flex gap-3 items-center">
 
@@ -122,8 +122,8 @@ export default function Upside() {
 
                   <div >
     
-                  <h2 className="text-[14px] text-neutral-700 font-semibold">{test.name}</h2>
-                  <h3 className="text-neutral-500  font-semibold text-xs ">{test.role}</h3>
+                  <h2 className="text-[14px] text-neutral-700 dark:text-neutral-300 font-semibold">{test.name}</h2>
+                  <h3 className="text-neutral-500 dark:text-neutral-400  font-semibold text-xs ">{test.role}</h3>
 
                   </div>
                 </div>

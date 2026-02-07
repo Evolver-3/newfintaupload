@@ -12,10 +12,11 @@ const Cardo = () => {
 
 
   const row={
-    hidden:{opacity:0,y:10},
+    hidden:{opacity:0,y:10,x:0},
     visible:(i)=>({
       opacity:1,
       y:0,
+      x:0,
       transition:{
         delay:i*2.4,
         duration:1
@@ -39,7 +40,7 @@ const Cardo = () => {
     <AnimatePresence mode='wait'>
     <motion.div
    
-    className='shadow-soft rounded-md w-75 h-auto bg-card mt-10'
+    className='shadow-soft rounded-md w-90 h-auto bg-card mt-10'
     key={cycle}>
 
         {Data.map((item,index)=>(
@@ -50,7 +51,6 @@ const Cardo = () => {
         variants={row}
         initial="hidden"
         animate="visible"
-       
         custom={index}
 
         >
@@ -58,7 +58,7 @@ const Cardo = () => {
           <motion.div 
           className='relative flex items-center justify-center '>
 
-          <motion.h2 className='absolute inset-0 text-neutral-600 text-md'
+          <motion.h2 className='absolute inset-0 text-neutral-600 dark:text-neutral-300 text-md'
           initial={{opacity:1,scale:0.8}}
           animate={{opacity:0,scale:1}}
           transition={{duration:1.5,delay:index * 2.4+0.6}}
@@ -76,7 +76,7 @@ const Cardo = () => {
           </motion.h2>
           
           
-          <h2 className='text-sm  text-neutral-700 px-10'>{item.text}</h2> 
+          <h2 className='text-sm text-neutral-700 dark:text-white px-10'>{item.text}</h2> 
 
           </motion.div>
 

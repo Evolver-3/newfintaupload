@@ -1,9 +1,10 @@
 
 import Cardo from './Cardo'
 import Container from '../CustomComponent/Container'
-import FintaChat from '../ChatAnimation/FintaChat'
+import FintaChat from './ChatAnimation/FintaChat'
 import NormalCardContain from '../CustomComponent/NormalCardContain'
 import CustomMain from '../CustomComponent/CustomMain'
+import Card4 from './Card4'
 
 const Datapage = () => {
 
@@ -24,9 +25,7 @@ const Datapage = () => {
        </NormalCardContain>
 
        <NormalCardContain heading={"EXPERTISE & GUIDANCE"} text={"Dedicated Slack channel for expert guidance on IRS notices, compliance letters, and more."} >
-        <div className='h-75'>
-          <img src='expertise.webp' className='w-80 rounded-xl'/> 
-        </div>
+        <Card4/>
        </NormalCardContain>
        
       </CustomMain>
