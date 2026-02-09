@@ -4,7 +4,7 @@ const ChatUi = ({text,className=''}) => {
   return (
     <div
 
-    className={`shadow-finta rounded-t-md rounded-bl-md rounded-br-sm p-1 text-sec w-fit px-2 py-2 max-w-60 bg-neutral-100 dark:bg-neutral-500  ${className}`}>
+    className={`shadow-finta border border-neutral-100 rounded-t-xl text-[15px] text-neutral-800 w-fit max-w-55 bg-neutral-50 dark:bg-neutral-500 ${className}`}>
       {text}
     </div>
   )
