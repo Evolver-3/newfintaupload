@@ -1,4 +1,5 @@
 import CategorySpan from "./CategorySpan"
+import {motion} from 'motion/react'
 
 const DataCard=[
   {time:"1m age",text:"Slack",span:"Software",amount:"-$25",icon:<i className='bx  bx-laptop-alt'></i>,status:"expense"},
@@ -43,16 +44,18 @@ const InnerCard = () => {
        <h2 className='text-sm text-neutral-600 '>{data.text}</h2>
       </div>
 
-      <div className='flex items-center gap-10 justify-end'>
+      <div className='flex items-center gap-10 justify-end '>
 
-        <div className='relative rounded-md px-2 justify-end '>
-          <div className={`relative flex items-center gap-2 ${statusStyles[data.status].span}`}>
+        <div className='relative justify-end '>
+          <motion.div
+          initial={{opacity:0,scale:0,x:40}}
+          className={`relative flex items-center rounded-md gap-2 py-auto px-2 ${statusStyles[data.status]}`}>
+
           <h2 className='text-first'>{data.icon}</h2>
           <h2 className='text-[14px]'>{data.span}</h2>
-          </div>
-
+          </motion.div>
           <CategorySpan/>
-         
+
         </div>
 
         
