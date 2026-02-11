@@ -27,14 +27,57 @@ const statusStyles={
   }
 }
 
+const bodyElementVariant={
+  hidden:{opacity:0,y:10,filter:"blur(5px)"},
+  show:(i)=>({
+    opacity:1,
+    y:0,
+    filter:"blur(0px)",
+    transition:{
+      delay:i === 0? 0:1.2,
+      duration:0.5
+    }
+  })
+}
+
+const spanVariant={
+  hidden:{opacity:1,y:-20,x:10,filter:"blur(0px)"},
+  show:(i)=>({
+    opacity:0,
+    y:-20,
+    x:20,
+    filter:"blur(4px)",
+    transition:{duration:2,delay:i === 0? 0.6 :1.8}
+  })
+}
+
+const mainVariant={
+  hidden:{
+    opacity:0,x:20,filter:"blur(4px)"
+  },
+  show:(i)=>({
+    opacity:1,
+    x:0,
+    filter:"blur(0px)",
+    transition:{duration:1,delay:i===0?0.6:1.8}
+  })
+}
+
 const InnerCard = () => {
   return (
-  <div className='shadow-finta px-5 py-4 rounded-md flex flex-col gap-5 w-full bg-card' >
+  <div className='shadow-finta rounded-md flex flex-col gap-1 w-full bg-card' >
 
-    <div className='flex flex-col gap-5'>
+    <div className='flex flex-col gap-y-3 divide-y divide-neutral-200 dark:divide-neutral-600 py-3'>
 
     {DataCard.map((data,index)=>((
-      <div className='grid grid-cols-2 gap-10  border-b border-black/10 pb-3 w-full' key={data.text}>
+      <motion.div
+      key={index}
+      variants={bodyElementVariant}
+      initial="hidden"
+      whileInView="show"
+      custom={index}
+     
+      className='grid grid-cols-2 gap-10 w-full px-4 py-1' >
 
       <div className='flex text-nowrap items-center gap-x-6 '>
 
@@ -48,13 +91,20 @@ const InnerCard = () => {
 
         <div className='relative justify-end '>
           <motion.div
-          initial={{opacity:0,scale:0,x:40}}
-          className={`relative flex items-center rounded-md gap-2 py-auto px-2 ${statusStyles[data.status]}`}>
+          variants={mainVariant}
+          custom={index}
+          className={`relative flex items-center rounded-md gap-2 py-auto px-2 ${statusStyles[data.status].span}`}>
 
           <h2 className='text-first'>{data.icon}</h2>
           <h2 className='text-[14px]'>{data.span}</h2>
           </motion.div>
-          <CategorySpan/>
+
+          <motion.div
+          variants={spanVariant}
+          custom={index}>
+            <CategorySpan/>
+          </motion.div>
+          
 
         </div>
 
@@ -64,7 +114,7 @@ const InnerCard = () => {
           </div>
       </div>
 
-    </div>
+      </motion.div>
 
     )))}
     </div>

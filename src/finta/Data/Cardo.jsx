@@ -39,7 +39,7 @@ const Cardo = () => {
     <AnimatePresence mode='wait'>
     <motion.div
    
-    className='shadow-soft rounded-md w-80 h-fit bg-card mt-10  divide-y divide-neutral-200 dark:divide-neutral-600'
+    className='shadow-soft rounded-md w-80 h-fit bg-card mt-10 divide-y divide-neutral-200 dark:divide-neutral-600'
     key={cycle}>
 
         {Data.map((item,index)=>(
