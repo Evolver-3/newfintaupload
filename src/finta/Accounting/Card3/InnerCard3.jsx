@@ -48,7 +48,7 @@ const InnerCard3 = () => {
         initial={{opacity:0,scale:0}}
         animate={{opacity:1,scale:1}}
         transition={{delay:3,duration:0.3}}
-        className='text-blue-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl'  xmlns="http://www.w3.org/2000/svg" width="20" height="20"  
+        className='text-blue-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl w-fit h-fit'  xmlns="http://www.w3.org/2000/svg" width="20" height="20"  
         fill="currentColor" viewBox="0 0 24 24" >
 
         <path d="M13.29 7.29 7 13.58l-2.29-2.29L3.3 12.7l3 3c.2.2.45.29.71.29s.51-.1.71-.29l7-7-1.41-1.41Zm-.29 6.3-.79-.79-1.41 1.41 1.5 1.5c.2.2.45.29.71.29s.51-.1.71-.29l7-7-1.41-1.41-6.29 6.29Z"></path>

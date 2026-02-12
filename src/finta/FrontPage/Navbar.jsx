@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className=' gap-5 items-center hidden md:flex'>
           
           {navItems.map((item)=>(
-            <a href={item.href} key={item.title} className=' text-sm hover:text-neutral-700 hover'>{item.title}</a>
+            <a href={item.href} key={item.title} className=' text-sm hover:text-neutral-700 dark:hover:text-gray-200'>{item.title}</a>
           ))}
 
           <button className='bg-blue-500 rounded-md px-4 py-1.5 text-white text-sm  hover:bg-blue-600 cursor-pointer font-semibold text-shadow-new'>Get started</button>
@@ -72,7 +72,7 @@ const Navbar = () => {
         <div className=' gap-3 items-center flex flex-col py-4'>
           
           {navItems.map((item)=>(
-            <a href={item.href} key={item.title} className='hover:text-neutral-500'>{item.title}</a>
+            <a href={item.href} key={item.title} className='hover:text-neutral-500 dark:hover:text-gray-200'>{item.title}</a>
           ))}
 
           <button className='bg-blue-500 rounded-md px-4 py-1.5 text-white text-sm  hover:bg-blue-600 cursor-pointer font-semibold text-shadow-new'>Get started</button>
@@ -80,7 +80,7 @@ const Navbar = () => {
           
         </div>
 
-        <button className='md:hidden absolute top-3 right-2 cursor-pointer' onClick={()=>setOpen(false)} >
+        <button className='md:hidden absolute top-4 right-20 cursor-pointer' onClick={()=>setOpen(false)} >
           <i className='bx bx-x bx-sm text-neutral-600 hover:text-neutral-400'></i>
         </button>
         

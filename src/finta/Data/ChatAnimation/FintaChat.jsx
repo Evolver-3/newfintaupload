@@ -1,103 +1,121 @@
-import { motion,useAnimate,useInView,AnimatePresence} from 'motion/react'
-import ChatUi from './ChatUi'
+import { motion,useAnimate,useInView} from 'motion/react'
+
 import Popple from './Popple'
-import { useEffect, useState} from 'react'
+import { forwardRef, useEffect, useRef, useState} from 'react'
 
 
-const ChatFx=[
-  {id:1,text:"Yes, if your business rents a dedicated office space, the entire rental cost can be claimed as a business expense.",span:"<i className='bx bx-checks'></i>",span2:"10:55PM",className:"rounded-bl-xl rounded-br-md pl-2 py-2",parentClassName:"firstBlock flex flex-col gap-1 w-fit ml-auto"},
-  {id:2,text:<Popple/>},
-  {id:3,text:"Yes, if your business rents a dedicated office space, the entire rental cost can be claimed as a business expense.",span:"Andy from Finta" }
-]
 
 const FintaChat = () => {
-  const [data,setData]=useState(false)
-  const [scope,animate]=useAnimate()
-  const isInView=useInView(scope,{margin:"-10px",once:false,amount:0.5})
+
+  const ref=useRef(null)
+  const isInView=useInView(ref,{amount:1})
+
+  const MotionChatUi=motion(ChatUi)
 
 
-
-  const animationSequence=async()=>{
-    await animate(".firstBlock",{y:100},{duration:0.7,delay:0})
-    await animate(".secondBlock",{opacity:1,y:80},{duration:0.5,delay:1.8,type:"spring"})
-    await animate("h3",{opacity:1,y:-20})
-    await animate (".textLoading",{opacity:1},{duration:0.2,delay:0.5})
-    animate (".text",{opacity:0})
-
-    await animate(".firstBlock",{y:60},{duration:0.1,delay:0})
-    await animate(".textLoading",{opacity:0})
-    await animate("h3",{y:0})
-    await animate(".text",{opacity:1})
+  const container={
+    hidden:{},
+    show:{
+      transition:{
+        staggerChildren:0.4
+      }
+    }
   }
 
-
-  useEffect(() => {
-  if (isInView) {
-    animationSequence()
+const firstBlock = {
+  hidden: { y: 150, opacity: 0 },
+  show: {
+    y: 40,
+    opacity: 1,
+    transition: { duration: 0.8 }
   }
-}, [isInView])
+}
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setData(true);
-  }, 1800); // delay like typing
+const profile = {
+  hidden: { opacity: 0, x: -5, filter: "blur(3px)" },
+  show: { opacity: 1, x: 0, filter: "blur(0px)" }
+}
 
-  return () => clearTimeout(timer);
-}, []);
+
+const popple = {
+  hidden: { opacity: 0, filter: "blur(5px)" },
+  show: { opacity: 1, filter: "blur(0px)" }
+}
+
+
+const text = {
+  hidden: { opacity: 0, filter: "blur(5px)" },
+  show: { opacity: 1, filter: "blur(0px)" }
+}
 
 
   return (
-    <AnimatePresence>
-    <div
-    ref={scope}
-    className='flex flex-col justify-center w-85 h-fit rounded-md mask-y-from-90% mask-y-to-0% mb-5 '>
-    
-      <motion.div
-    initial={{y:180}}
-    className='firstBlock flex flex-col gap-1 w-fit ml-auto'>
-
-      <ChatUi text={"Hey, is it possible to expense office rent through my startup?"} className=''/>
-
-      <div className='flex items-center gap-x-1.5 ml-auto text-first pr-5 text-neutral-700 dark:text-neutral-200'>
-        <i className='bx bx-checks'></i> 
-        <h4> 11:50PM</h4>
-      </div>
-
-    </motion.div>
-
-
-    <motion.div
-    initial={{opacity:0,y:160}}
-    exit={{y:160,opacity:0}}
-    transition={{duration:.2}}
-    className='secondBlock flex gap-4 mt-6'>
+    <div className='w-full h-80 flex items-center justify-center mask-y-from-90% mask-y-to-0%'
+    ref={ref}>
       
-      <div className='w-10 h-10 bg-teal-300 rounded-full'></div>
-       
-        <motion.div className='relative'>
+      <motion.div className='w-85  h-full flex flex-col justify-around shadow-weird px-5 py-5'
+      variants={container}
+      initial="hidden"
+      animate={isInView? "show":"hidden"}>
 
-          
-          <ChatUi className='textLoading absolute rounded-br-xl rounded-bl-md px-2 py-1.5'
-          initial={{opacity:0}}
-          text={data?<Popple/>:"Yes, if your business rents a dedicated office space, the entire rental cost can be claimed as a business expense."}/>
- 
-          
-          <motion.h3
-          initial={{opacity:0,y:0}}
-          className='text-first text-neutral-700 pl-5 mt-2 dark:text-neutral-300'>Andy from Finta</motion.h3>
+        <motion.div className='flex flex-col gap-2 mt-5 '
+        variants={firstBlock}>
+
+          <ChatUi className='ml-auto py-1 px-2 rounded-bl-xl rounded-br-lg' text={"Hey, is it possible to expense office rent through my startup?"}/>
+
+          <div className='flex ml-auto mr-5 text-first items-center text-gray-600 dark:text-white '>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" >
+              <path d="M13.29 7.29 7 13.58l-2.29-2.29L3.3 12.7l3 3c.2.2.45.29.71.29s.51-.1.71-.29l7-7-1.41-1.41Zm-.29 6.3-.79-.79-1.41 1.41 1.5 1.5c.2.2.45.29.71.29s.51-.1.71-.29l7-7-1.41-1.41-6.29 6.29Z"></path>
+            </svg>
+            <h2>
+              12:34AM
+            </h2>
+          </div>
 
         </motion.div>
 
-    </motion.div>
+        <div className='flex gap-2 '>
 
-    
+          <motion.div
+          className='size-7 bg-neutral-700 rounded-full mt-auto mb-6'
+          variants={profile}></motion.div>
+
+          <div className='flex flex-col gap-2'>
+
+            <div className='relative'>
+              <MotionChatUi
+              variants={popple}
+              className=' absolute bottom-0 w-fit rounded-br-xl rounded-bl-lg px-2 py-1' text={<Popple/>}/>
+
+
+              <MotionChatUi
+              variants={text}
+              className=' w-fit rounded-br-xl rounded-bl-lg px-2 py-1' text={"Yes, if your business rents a dedicated office space, the entire rental cost can be claimed as a business expense."}/>
+            </div>
+
+            <h2 className='text-first items-center text-gray-600 dark:text-white '>
+              Andy from finta
+            </h2>
+
+          </div>
+
+        </div>
+
+      </motion.div>
+
     </div>
-
-
-
-    </AnimatePresence>
- 
   )
 }
 
 export default FintaChat
+
+const ChatUi = forwardRef(({text,className='',...props}, ref) => {
+  return (
+    <div
+    ref={ref}
+    {...props}
+    className={`shadow-finta border border-neutral-100 rounded-t-xl text-[15px] text-neutral-800 dark:text-shadow-gray-200 max-w-55 bg-neutral-50 dark:bg-neutral-500 dark:border-neutral-500  ${className}`}>
+      {text}
+    </div>
+  )
+})

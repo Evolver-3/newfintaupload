@@ -69,8 +69,8 @@ const SmallCard=({text,amount,message,className=''})=>{
 
   return(
     <div
-          className= {`absolute inset-0 rounded-md w-full bg-transparent  p-4 shrink-0 ${className}`}>
-            <div className='flex flex-col gap-3 shadow-weird rounded-xl py-2 px-4 bg-card'>
+          className= {`absolute inset-0 rounded-md w-full p-4 shrink-0 ${className}`}>
+            <div className='flex flex-col gap-3 shadow-weird rounded-xl py-2 px-4 bg-card overflow-hidden'>
               <h3 className='text-sm text-foreground font-sans'>{text}</h3>
 
               <h2 className='text-[25px] leading-tight font-semibold text-foreground'>{amount}</h2>
