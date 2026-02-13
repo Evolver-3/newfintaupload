@@ -10,7 +10,8 @@ const FintaChat = () => {
     hidden:{},
     show:{
       transition:{
-        staggerChildren:.6,
+        staggerChildren:1.2,
+        delay:1
       }
     }
   }
@@ -20,7 +21,7 @@ const firstBlock = {
   show: {
     y: [150,80,40],
     opacity: 1,
-    transition: { duration: 3,
+    transition: { duration: 2,
       times:[0,0.5,1],ease:"easeInOut"
      }
   }
