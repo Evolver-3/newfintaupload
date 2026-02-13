@@ -8,7 +8,7 @@ import { forwardRef, useEffect, useRef, useState} from 'react'
 const FintaChat = () => {
 
   const ref=useRef(null)
-  const isInView=useInView(ref,{amount:1})
+
 
   const MotionChatUi=motion(ChatUi)
 
@@ -17,17 +17,26 @@ const FintaChat = () => {
     hidden:{},
     show:{
       transition:{
-        staggerChildren:0.4
+        staggerChildren:.9
       }
     }
   }
+  const group = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 1
+    }
+  }
+}
+
 
 const firstBlock = {
   hidden: { y: 150, opacity: 0 },
   show: {
     y: 40,
     opacity: 1,
-    transition: { duration: 0.8 }
+    transition: { duration: 1.8 }
   }
 }
 
@@ -56,7 +65,8 @@ const text = {
       <motion.div className='w-85  h-full flex flex-col justify-around shadow-weird px-5 py-5'
       variants={container}
       initial="hidden"
-      animate={isInView? "show":"hidden"}>
+      whileInView="show"
+      viewport={{once:false,amount:1}}>
 
         <motion.div className='flex flex-col gap-2 mt-5 '
         variants={firstBlock}>
@@ -74,7 +84,8 @@ const text = {
 
         </motion.div>
 
-        <div className='flex gap-2 '>
+        <motion.div className='flex gap-2 '
+        variants={group}>
 
           <motion.div
           className='size-7 bg-neutral-700 rounded-full mt-auto mb-6'
@@ -99,7 +110,7 @@ const text = {
 
           </div>
 
-        </div>
+        </motion.div>
 
       </motion.div>
 
