@@ -7,12 +7,12 @@ const InnerCard2 = () => {
   const [scope,animate]=useAnimate();
 
   const Animation=async()=>{
-    await animate('.svgOne',{backgroundColor:"oklch(54.6% 0.245 262.881)",scale:1})
+    await animate('.svgOne',{backgroundColor:"oklch(54.6% 0.245 262.881)",scale:1},{delay:1})
     await animate("path",{pathLength:1,opacity:1},{duration:0.5})
     await animate('.colored',{scale:0.95,opacity:0.95},{duration:0.5})
     
     animate('h1',{opacity:0,y:20})
-    await animate('.colored',{scale:1,opacity:1,backgroundColor:"oklch(48.8% 0.243 264.376)"},{duration:0.8})
+    await animate('.colored',{scale:1,opacity:1},{duration:0.8})
 
     await animate('.svgTwo',{opacity:1,y:0,rotate:360},{duration:1 ,ease:"linear"})
 

@@ -12,11 +12,12 @@ const Data=[
 const Cardo = () => {
 
   const row={
-    hidden:{opacity:0,y:10,x:0},
+    hidden:{opacity:0,y:10,x:0,filter:"blur(3px)"},
     visible:(i)=>({
       opacity:1,
       y:0,
-      x:0,  
+      x:0,
+      filter:"blur(0px)",  
       transition:{
         delay:i*2.4,
         duration:1
@@ -80,8 +81,8 @@ const Cardo = () => {
           className='showntext px-3 py-0.5 rounded-md border border-neutral-200 text-sm text-neutral-400 mx-5'>{item.date}</motion.div>
 
           <motion.div
-          initial={{opacity:0,x:6}}
-          animate={{opacity:1,x:0}}
+          initial={{opacity:0,x:6,filter:"blur(3px)"}}
+          animate={{opacity:1,x:0,filter:"blur(0px)"}}
           transition={{delay:index*2.4+2.4,duration:0.4}}
           
           className='hiddentext absolute py-1 px-2 text-sm text-blue-600 bg-blue-200 border-0 rounded-md right-5'>{item.span}</motion.div>
