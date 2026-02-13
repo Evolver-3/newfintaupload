@@ -9,9 +9,10 @@ const FintaChat = () => {
   const container={
     hidden:{},
     show:{
-      transition:{
-        staggerChildren:1.2,
-        delay:1
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 14
       }
     }
   }
@@ -27,9 +28,10 @@ const firstBlock = {
   }
 }
 const secondBlock={
-  hidden:{},
+  hidden:{opacity:0},
   show:{opacity:1,
     transition:{
+      delay:1.6,
       staggerChildren:0.9
     }
   }
@@ -54,13 +56,13 @@ const text = {
 
 
   return (
-    <div className='w-full h-80 flex items-center justify-center mask-y-from-90% mask-y-to-0%'>
+    <div className='w-full h-80 flex items-center justify-center mask-y-from-90% mask-y-to-0% mb-5'>
 
       <motion.div className='w-85  h-full flex flex-col justify-around shadow-weird px-5 py-5'
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 1 }}>
+      viewport={{ once: false, amount: 0.4 }}>
 
         <motion.div className='flex flex-col gap-2 mt-5'
         variants={firstBlock}>
@@ -78,7 +80,7 @@ const text = {
 
         </motion.div>
 
-        <motion.div className='flex gap-2 opacity-0'
+        <motion.div className='flex gap-2'
         variants={secondBlock} >
 
           <motion.div

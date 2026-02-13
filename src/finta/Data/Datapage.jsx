@@ -4,7 +4,6 @@ import Container from '../CustomComponent/Container'
 import FintaChat from './ChatAnimation/FintaChat'
 import NormalCardContain from '../CustomComponent/NormalCardContain'
 import CustomMain from '../CustomComponent/CustomMain'
-import Card4 from './Card4'
 
 const Datapage = () => {
 
@@ -25,7 +24,7 @@ const Datapage = () => {
        </NormalCardContain>
 
        <NormalCardContain heading={"EXPERTISE & GUIDANCE"} text={"Dedicated Slack channel for expert guidance on IRS notices, compliance letters, and more."} >
-        <img src='expertise.webp' className='object-fit w-70 h-70 mt-10 rounded-xl'/>
+        <img src='expertise.webp' className='object-fit w-70 h-70  rounded-xl'/>
        </NormalCardContain>
        
       </CustomMain>
