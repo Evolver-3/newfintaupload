@@ -1,42 +1,36 @@
-import { motion,useAnimate,useInView} from 'motion/react'
-
+import { motion} from 'motion/react'
 import Popple from './Popple'
-import { forwardRef, useEffect, useRef, useState} from 'react'
-
-
+import { forwardRef} from 'react'
 
 const FintaChat = () => {
 
-  const ref=useRef(null)
-
-
   const MotionChatUi=motion(ChatUi)
-
 
   const container={
     hidden:{},
     show:{
       transition:{
-        staggerChildren:.9
+        staggerChildren:.6,
       }
     }
   }
-  const group = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 1
-    }
-  }
-}
-
 
 const firstBlock = {
-  hidden: { y: 150, opacity: 0 },
+  hidden: { y: 150, opacity: 1 },
   show: {
-    y: 40,
+    y: [150,80,40],
     opacity: 1,
-    transition: { duration: 1.8 }
+    transition: { duration: 3,
+      times:[0,0.5,1],ease:"easeInOut"
+     }
+  }
+}
+const secondBlock={
+  hidden:{},
+  show:{opacity:1,
+    transition:{
+      staggerChildren:0.9
+    }
   }
 }
 
@@ -54,21 +48,20 @@ const popple = {
 
 const text = {
   hidden: { opacity: 0, filter: "blur(5px)" },
-  show: { opacity: 1, filter: "blur(0px)" }
+  show: { opacity: 1, filter: "blur(0px)"}
 }
 
 
   return (
-    <div className='w-full h-80 flex items-center justify-center mask-y-from-90% mask-y-to-0%'
-    ref={ref}>
-      
+    <div className='w-full h-80 flex items-center justify-center mask-y-from-90% mask-y-to-0%'>
+
       <motion.div className='w-85  h-full flex flex-col justify-around shadow-weird px-5 py-5'
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{once:false,amount:1}}>
+      viewport={{ once: false, amount: 1 }}>
 
-        <motion.div className='flex flex-col gap-2 mt-5 '
+        <motion.div className='flex flex-col gap-2 mt-5'
         variants={firstBlock}>
 
           <ChatUi className='ml-auto py-1 px-2 rounded-bl-xl rounded-br-lg' text={"Hey, is it possible to expense office rent through my startup?"}/>
@@ -84,8 +77,8 @@ const text = {
 
         </motion.div>
 
-        <motion.div className='flex gap-2 '
-        variants={group}>
+        <motion.div className='flex gap-2 opacity-0'
+        variants={secondBlock} >
 
           <motion.div
           className='size-7 bg-neutral-700 rounded-full mt-auto mb-6'
