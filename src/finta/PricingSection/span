@@ -1,0 +1,68 @@
+<div class="w-1/2 shrink-0 pr-4">
+  <section class="container pb-16 lg:pt-4 lg:pb-20">
+    <div class="mx-auto">
+    <div class="mx-auto flex flex-col items-start gap-[12px] w-full p-5 rounded-[12px] bg-white ring-1 ring-black/10 ring-inset shadow-finta sm:max-w-[484px] sm:p-6 sm:gap-[12px]">
+      <div class="flex flex-col items-start gap-[10px] self-stretch">
+        <h3 style="color:#2679F3;font-size:16px;font-style:normal;font-weight:500;line-height:26px;letter-spacing:-0.24px">Taxes</h3>
+        
+        <div class="flex w-full justify-between items-center self-stretch gap-x-3">
+          <div class="flex items-center gap-[6px]">
+            
+            <svg class="text-brand-blue" width="20" height="20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5.75 11.417 3.188 2.833 5.312-8.5"></path></svg>
+            
+            <span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none">
+              <span class="whitespace-nowrap" style="color:#202020;font-size:16px;font-style:normal;font-weight:400;line-height:26px;letter-spacing:-0.24px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-color:#94969C;text-decoration-thickness:10%;text-decoration-skip-ink:auto;text-underline-offset:15%;text-underline-position:auto">Federal income tax</span>
+              
+              <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div>
+            
+            </span>
+          </div>
+          
+          <div style="color:#202020;font-feature-settings:'liga' off;font-size:32px;font-style:normal;font-weight:500;line-height:38px;letter-spacing:-0.8px">$500</div>
+        </div>
+      </div>
+      
+      <div class="h-px w-full bg-black/5"></div>
+      
+      <div class="flex flex-col items-start gap-[32px] self-stretch">
+        
+        <div class="flex flex-col items-start gap-[16px] self-stretch">
+          <h4 style="color:#202020;font-size:12px;font-style:normal;font-weight:500;line-height:20px">Add-ons:</h4>
+          
+          <div class="flex flex-col items-start gap-[12px] self-stretch">
+            <div class="flex justify-between items-center self-stretch">
+              <div class="flex w-[200px] items-center gap-[8px]">
+                <svg class="text-brand-blue" width="20" height="20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5.75 11.417 3.188 2.833 5.312-8.5"></path></svg>
+                
+                <span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none">
+                  
+                  <span class="inline-block whitespace-nowrap" style="color:#646464;font-size:14px;font-style:normal;font-weight:350;line-height:20px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-skip-ink:auto;text-decoration-thickness:10%;text-underline-offset:15%;text-underline-position:from-font">Delaware franchise tax</span>
+                  
+                  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div>
+                </span>
+              </div>
+              
+              <div style="color:#202020;font-size:14px;font-style:normal;font-weight:400;line-height:20px">
+                <span>Included</span>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center self-stretch">
+              <div class="flex w-[200px] items-center gap-[8px]">
+                <div class="flex w-[20px] h-[20px] p-[2px] justify-center items-center flex-shrink-0">
+                  <div class="w-[16px] h-[16px] flex-shrink-0 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.995 7.25V0.75M0.75 3.995L7.25 3.995" stroke="#646464" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </div>
+                </div>
+                
+                <span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none">
+                  
+                  <span class="inline-block whitespace-nowrap" style="color:#646464;font-size:14px;font-style:normal;font-weight:350;line-height:20px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-skip-ink:auto;text-decoration-thickness:10%;text-underline-offset:15%;text-underline-position:from-font">State income tax</span>
+                  
+                  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div>
+                </span>
+              </div>
+              
+              <div style="color:#202020;font-size:14px;font-style:normal;font-weight:400;line-height:20px">
+                
+                <span>$150 ea.</span></div></div><div class="flex justify-between items-center self-stretch"><div class="flex w-[200px] items-center gap-[8px]"><div class="flex w-[20px] h-[20px] p-[2px] justify-center items-center flex-shrink-0"><div class="w-[16px] h-[16px] flex-shrink-0 flex justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.995 7.25V0.75M0.75 3.995L7.25 3.995" stroke="#646464" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none"><span class="inline-block whitespace-nowrap" style="color:#646464;font-size:14px;font-style:normal;font-weight:350;line-height:20px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-skip-ink:auto;text-decoration-thickness:10%;text-underline-offset:15%;text-underline-position:from-font">Foreign founders</span><div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div></span></div><div style="color:#202020;font-size:14px;font-style:normal;font-weight:400;line-height:20px"><span>$250 ea.</span></div></div><div class="flex justify-between items-center self-stretch"><div class="flex w-[200px] items-center gap-[8px]"><div class="flex w-[20px] h-[20px] p-[2px] justify-center items-center flex-shrink-0"><div class="w-[16px] h-[16px] flex-shrink-0 flex justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.995 7.25V0.75M0.75 3.995L7.25 3.995" stroke="#646464" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none"><span class="inline-block whitespace-nowrap" style="color:#646464;font-size:14px;font-style:normal;font-weight:350;line-height:20px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-skip-ink:auto;text-decoration-thickness:10%;text-underline-offset:15%;text-underline-position:from-font">Foreign subsidiary</span><div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div></span></div><div style="color:#202020;font-size:14px;font-style:normal;font-weight:400;line-height:20px"><span>$1,000 ea.</span></div></div><div class="flex justify-between items-center self-stretch"><div class="flex w-[200px] items-center gap-[8px]"><div class="flex w-[20px] h-[20px] p-[2px] justify-center items-center flex-shrink-0"><div class="w-[16px] h-[16px] flex-shrink-0 flex justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.995 7.25V0.75M0.75 3.995L7.25 3.995" stroke="#646464" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none"><span class="inline-block whitespace-nowrap" style="color:#646464;font-size:14px;font-style:normal;font-weight:350;line-height:20px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-skip-ink:auto;text-decoration-thickness:10%;text-underline-offset:15%;text-underline-position:from-font">R&amp;D tax credits</span><div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div></span></div><div style="color:#202020;font-size:14px;font-style:normal;font-weight:400;line-height:20px"><span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none"><span class="whitespace-nowrap underline decoration-dotted decoration-[#94969C] decoration-[10%]" style="text-decoration-skip-ink:auto;text-underline-offset:15%;text-underline-position:auto">5%</span><div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div></span></div></div><div class="flex justify-between items-center self-stretch"><div class="flex w-[200px] items-center gap-[8px]"><div class="flex w-[20px] h-[20px] p-[2px] justify-center items-center flex-shrink-0"><div class="w-[16px] h-[16px] flex-shrink-0 flex justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.995 7.25V0.75M0.75 3.995L7.25 3.995" stroke="#646464" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><span tabindex="0" role="button" class="relative inline-flex cursor-help focus:outline-none"><span class="inline-block whitespace-nowrap" style="color:#646464;font-size:14px;font-style:normal;font-weight:350;line-height:20px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-skip-ink:auto;text-decoration-thickness:10%;text-underline-offset:15%;text-underline-position:from-font">Form 1099s</span><div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 z-50 pointer-events-none"></div></span></div><div style="color:#202020;font-size:14px;font-style:normal;font-weight:400;line-height:20px"><span>$10 ea.</span></div></div></div></div><div class="flex p-[12px] flex-col items-start gap-[16px] self-stretch rounded-[8px] bg-[#F9F9FA] shadow-[0_0_0_1px_rgba(15,12,12,0.05)]"><div class="flex sm:hidden items-start gap-[8px] self-stretch"><div class="flex-1" style="color:#475467;font-size:14px;font-style:normal;font-weight:400;line-height:20px">You’ll be automatically set up on the free Accounting plan to onboard taxes.</div></div><div class="hidden sm:flex items-start gap-[8px] self-stretch"><div class="flex-1" style="color:#475467;font-size:14px;font-style:normal;font-weight:400;line-height:20px">You’ll be automatically set up on the free Accounting plan to onboard taxes in the app. Filing taxes requires accounting data.</div></div><a class="flex h-[36px] px-[14px] justify-center items-center gap-[8px] rounded-[8px] bg-[#2679F3] transition-background duration-150 ease-in-out hover:bg-[#2262C7] active:bg-[#215BB9]" style="color:#FFF;text-shadow:0 1px 1px rgba(0, 0, 0, 0.16);font-size:14px;font-style:normal;font-weight:500;line-height:20px;border-radius:8px;box-shadow:0 1px 4px -1px rgba(30, 31, 37, 0.38)" href="https://app.finta.com/signup?plan=taxes">File taxes</a></div></div></div></div></section></div>

@@ -5,9 +5,9 @@ const Footer = () => {
 
   return (
     <Container>
-    <div className='flex flex-col gap-15 pb-5'>
+    <div className='flex flex-col gap-15 pb-5 w-[90%] mx-auto'>
 
-      <div className='bg-neutral-900 dark:bg-neutral-400 rounded-xl flex flex-col items-center justify-center h-90'>
+      <div className='bg-neutral-900 dark:bg-neutral-400 rounded-xl flex flex-col items-center justify-center h-90 '>
 
 
       <div className='flex flex-col items-center justify-center gap-8'>
@@ -19,7 +19,7 @@ const Footer = () => {
 
         </div>
 
-        <p className='text-md text-neutral-400 dark:text-neutral-100'>Built for founders who want to focus on their business, not their accounting.</p>
+        <p className='text-md text-neutral-400 dark:text-neutral-100 max-w-sm text-center md:max-w-xl'>Built for founders who want to focus on their business, not their accounting.</p>
 
         <button className='px-3 py-1 bg-blue-600 text-md font-semibold text-white rounded-md hover:bg-blue-700 active:hover:bg-blue-800' >Get started</button>
 
@@ -45,11 +45,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='flex items-center justify-between'>
+      <div className='flex items-center justify-between text-sec md:text-sm'>
 
-       <p className='text-sm text-neutral-500 dark:text-neutral-200'> Copyright © Finta Platform Inc. All rights reserved.</p>
+       <p className=' text-neutral-500 dark:text-neutral-200'> Copyright © Finta Platform Inc. All rights reserved.</p>
 
-       <div className='flex gap-7 text-sm text-neutral-700 cursor-pointer dark:text-neutral-300'>
+       <div className='flex gap-7  text-neutral-700 cursor-pointer dark:text-neutral-300'>
         <p className='hover:underline'>Terms and conditions</p>
         <p className='hover:underline '>Privacy Policy</p>
        </div>

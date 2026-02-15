@@ -12,7 +12,7 @@ const Body = () => {
   return (
 
  
-    <div className='flex flex-col items-center justify-center gap-5 mx-auto max-w-7xl px-4 min-w-xl'>
+    <div className='flex flex-col items-center justify-center gap-5 mx-auto max-w-7xl px-4 '>
 
       <div className='flex items-center rounded-full mt-35 mb-5 px-4 py-0.75 pr-1.75 pl-2.75  text-[14px] cursor-pointer gap-x-1.5 border border-black/3 bg-[rgba(30,31,37,0.04)] backdrop-blur-[2.5px] hover:bg-[rgba(30,31,37,0.08)] text-xs font-semibold dark:text-foreground'>
       
