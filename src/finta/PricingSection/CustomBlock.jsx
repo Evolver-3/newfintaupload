@@ -3,7 +3,7 @@ import React from 'react'
 const CustomBlock = ({icon,text,underlineExist=true,spanAvailable=true,spanText1,spanText2,className=""}) => {
 
   const underliner=
-    underlineExist ?"underline underline-offset-2 decoration-2 decoration-dotted decoration-neutral-400":" ";
+    underlineExist ?`underline underline-offset-2 decoration-2 decoration-dotted decoration-neutral-500`:" ";
   
   return (
     <div >

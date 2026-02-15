@@ -21,7 +21,7 @@ const Pricing = () => {
   return (
     <Container>
 
-      <div className='flex flex-col items-center justify-center my-10'>
+      <div className='flex flex-col items-center justify-center pb-10'>
 
         <div className='flex flex-col gap-4 text-center text-foreground'>
 
@@ -123,7 +123,7 @@ const Pricing = () => {
 
                                   <button className='relative inline-flex cursor-help focus:outline-none group'>
 
-                            <span className='whitespace-nowrap text-[16px] text-neutral-700 underline underline-offset-2 decoration-2 decoration-dotted decoration-neutral-400'>
+                            <span className='whitespace-nowrap text-[16px] text-neutral-700 underline underline-offset-2 decoration-2 decoration-dotted decoration-neutral-500'>
                               {items.text}
 
                             </span>
