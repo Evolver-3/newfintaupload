@@ -5,11 +5,13 @@ import AccountingCard from './finta/Accounting/AccountingCard';
 import Finance from './finta/FinancePage/Finance'
 import Pricing from './finta/PricingSection/Pricing'
 import Footer from './finta/Footer'
+import Container from "./finta/CustomComponent/Container";
 
 
 const App = () => {
   return (
     <div className='bg-background'>
+
       <Lay/>
       <Testimonial/>
       <Datapage/>
@@ -17,6 +19,7 @@ const App = () => {
       <Finance/>
       <Pricing/>
       <Footer/>
+
     
     </div>
   )

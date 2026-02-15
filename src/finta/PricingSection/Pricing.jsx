@@ -21,7 +21,7 @@ const Pricing = () => {
   return (
     <Container>
 
-      <div className='flex flex-col items-center justify-center my-30'>
+      <div className='flex flex-col items-center justify-center my-10'>
 
         <div className='flex flex-col gap-4 text-center text-foreground'>
 
