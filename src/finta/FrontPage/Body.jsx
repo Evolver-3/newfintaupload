@@ -12,7 +12,7 @@ const Body = () => {
   return (
 
  
-    <div className='flex flex-col items-center justify-center gap-5 mx-auto max-w-7xl px-4 '>
+    <div className='flex flex-col items-center justify-center gap-5 mx-auto px-4 '>
 
       <div className='flex items-center rounded-full mt-35 mb-5 px-4 py-0.75 pr-1.75 pl-2.75  text-[14px] cursor-pointer gap-x-1.5 border border-black/3 bg-[rgba(30,31,37,0.04)] backdrop-blur-[2.5px] hover:bg-[rgba(30,31,37,0.08)] text-xs font-semibold dark:text-foreground'>
       
@@ -45,7 +45,7 @@ const Body = () => {
 
 
       <div className='mask-r-from-80% mask-l-from-90%  overflow-hidden relative'>
-      <motion.div className='flex w-max gap-10 text-[30px] font-semibold max-w-2xl'
+      <motion.div className='flex  gap-10 text-[30px] font-semibold max-w-lg'
       animate={{
         x:["0%","-50%"]
       }}
